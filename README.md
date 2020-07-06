@@ -8,4 +8,5 @@ I kept it simple with the idea to focus on the architecture concepts instead of 
 
 I've tried to touch the most trending frameworks, design paradigms like functional or reactive programming and last approaches which I've been working on in the last months and years. To name a few of them:
 
-- Kotlin Coroutines → Language-native for asynchronous tasks, concurrency and reactive programmi
+- Kotlin Coroutines → Language-native for asynchronous tasks, concurrency and reactive programming (Flow).
+- Arrow (concretely the Either class) → Return a result with either success or 
