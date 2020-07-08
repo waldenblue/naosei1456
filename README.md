@@ -11,4 +11,5 @@ I've tried to touch the most trending frameworks, design paradigms like function
 - Kotlin Coroutines → Language-native for asynchronous tasks, concurrency and reactive programming (Flow).
 - Arrow (concretely the Either class) → Return a result with either success or error in a functional way.
 - Redux (custom approach) → Transfor/map datasets from one type to another through different Actions.
-- Dagg
+- Dagger Hilt → Android-specific library from Dagger to solve Dependency Injection more easily.
+- Compose UI → Most recent and modern t
