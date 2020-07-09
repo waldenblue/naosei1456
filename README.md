@@ -12,4 +12,5 @@ I've tried to touch the most trending frameworks, design paradigms like function
 - Arrow (concretely the Either class) → Return a result with either success or error in a functional way.
 - Redux (custom approach) → Transfor/map datasets from one type to another through different Actions.
 - Dagger Hilt → Android-specific library from Dagger to solve Dependency Injection more easily.
-- Compose UI → Most recent and modern t
+- Compose UI → Most recent and modern toolkit for render UI in Android, a game changer! 🤯
+- MockK -> To replace real classes with mocks when testing, also has tools to help in the gi
