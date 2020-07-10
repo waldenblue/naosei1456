@@ -13,4 +13,10 @@ I've tried to touch the most trending frameworks, design paradigms like function
 - Redux (custom approach) → Transfor/map datasets from one type to another through different Actions.
 - Dagger Hilt → Android-specific library from Dagger to solve Dependency Injection more easily.
 - Compose UI → Most recent and modern toolkit for render UI in Android, a game changer! 🤯
-- MockK -> To replace real classes with mocks when testing, also has tools to help in the gi
+- MockK -> To replace real classes with mocks when testing, also has tools to help in the given-when-then formula.
+
+![](demogif.gif)
+
+### Index
+· [Architecture](#architecture)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· [DATA Layer](#
