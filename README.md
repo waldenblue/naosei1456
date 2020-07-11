@@ -21,4 +21,6 @@ I've tried to touch the most trending frameworks, design paradigms like function
 · [Architecture](#architecture)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· [DATA Layer](#data-layer)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· [DOMAIN Layer](#domain-layer)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· [PRESENTATION Layer](
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· [PRESENTATION Layer](#presentation-layer)\
+· [Dependency Injection](#dependency-injection)\
+· [Modulation vs Monolith](#m
