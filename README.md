@@ -23,4 +23,10 @@ I've tried to touch the most trending frameworks, design paradigms like function
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· [DOMAIN Layer](#domain-layer)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;· [PRESENTATION Layer](#presentation-layer)\
 · [Dependency Injection](#dependency-injection)\
-· [Modulation vs Monolith](#m
+· [Modulation vs Monolith](#modulation-or-monolith)\
+· [Navigation](#navigation)\
+· [Testing](#testing)
+
+# Architecture.
+
+Build under the SOLID p
