@@ -29,4 +29,4 @@ I've tried to touch the most trending frameworks, design paradigms like function
 
 # Architecture.
 
-Build under the SOLID principles and Clean Architecture values, inspired on the new official [recommended architecture](https://developer.android.com/
+Build under the SOLID principles and Clean Architecture values, inspired on the new official [recommended architecture](https://developer.android.com/jetpack/guide) from Google along with the most interesting concepts I’ve been acquiring throughout my career
