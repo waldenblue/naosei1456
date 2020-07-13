@@ -33,4 +33,7 @@ Build under the SOLID principles and Clean Architecture values, inspired on the 
 
 Always [YAGNI](https://es.wikipedia.org/wiki/YAGNI) principle in mind, one of the most important for me.
 
-### Packa
+### Package organisation.
+
+- core → Base classes and utilities.
+- features → All the app capabilities separated 
