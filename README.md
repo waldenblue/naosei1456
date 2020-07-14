@@ -36,4 +36,7 @@ Always [YAGNI](https://es.wikipedia.org/wiki/YAGNI) principle in mind, one of th
 ### Package organisation.
 
 - core → Base classes and utilities.
-- features → All the app capabilities separated 
+- features → All the app capabilities separated in specific packages.
+- theme → Compose themming stuff.
+
+Every feature may have 3 main packages corresponding to Clean Architectu
