@@ -39,4 +39,6 @@ Always [YAGNI](https://es.wikipedia.org/wiki/YAGNI) principle in mind, one of th
 - features → All the app capabilities separated in specific packages.
 - theme → Compose themming stuff.
 
-Every feature may have 3 main packages corresponding to Clean Architectu
+Every feature may have 3 main packages corresponding to Clean Architecture layers concept, I’ve logically divided into: **DATA, DOMAIN** and **PRESENTATION.**
+
+<img width="600" 
