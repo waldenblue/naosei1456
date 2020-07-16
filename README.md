@@ -41,4 +41,4 @@ Always [YAGNI](https://es.wikipedia.org/wiki/YAGNI) principle in mind, one of th
 
 Every feature may have 3 main packages corresponding to Clean Architecture layers concept, I’ve logically divided into: **DATA, DOMAIN** and **PRESENTATION.**
 
-<img width="600" 
+<img width="600" alt="Screenshot 2022-02-27 at 18 31 35" src="https://user-images.githubusercontent.com/12541369/155892990-8206b4c0-2cfe-4
