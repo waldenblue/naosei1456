@@ -47,4 +47,6 @@ Every feature may have 3 main packages corresponding to Clean Architecture layer
 
 WHERE and HOW the Data is managed, retrieved and saved. Has 2 important pieces.
 
-### D
+### Data source.
+
+Knows HOW to retrieve the data from remote or local sources and maps it to **DOMAIN** objects (may have a comp
