@@ -49,4 +49,8 @@ WHERE and HOW the Data is managed, retrieved and saved. Has 2 important pieces.
 
 ### Data source.
 
-Knows HOW to retrieve the data from remote or local sources and maps it to **DOMAIN** objects (may have a companion mapper class to help in this process), simple and respecting the **S**ingle object responsability principle of SOLID
+Knows HOW to retrieve the data from remote or local sources and maps it to **DOMAIN** objects (may have a companion mapper class to help in this process), simple and respecting the **S**ingle object responsability principle of SOLID. 
+
+An important thing here is to make it implementation-agnostic from the other classes:
+
+I.e. in the App, `CoinRet
