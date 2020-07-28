@@ -53,4 +53,4 @@ Knows HOW to retrieve the data from remote or local sources and maps it to **DOM
 
 An important thing here is to make it implementation-agnostic from the other classes:
 
-I.e. in the App, `CoinRetrofitDataSource` is using [Retrofit](https://square.github.io/retrofit/) to retrieve the crypto markets, if tomorrow
+I.e. in the App, `CoinRetrofitDataSource` is using [Retrofit](https://square.github.io/retrofit/) to retrieve the crypto markets, if tomorrow I want to change the API and use [CoinMarketCap](https://coinmarketcap.com/) or [Coinpaprika]
