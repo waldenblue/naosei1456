@@ -58,4 +58,6 @@ In order to do that, I’ve applied the **D**ependency inversion principle of SO
 
 ### Repository.
 
-It has the business-logic, knowns WHERE to ask for the data, it is the entry point of the **DATA** layer and acts as single source of trut
+It has the business-logic, knowns WHERE to ask for the data, it is the entry point of the **DATA** layer and acts as single source of truth for the **DOMAIN** layer. May contain 1-N data sources.
+
+I.e in the App, `CoinRepository` is subscribed t
