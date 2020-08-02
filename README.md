@@ -60,4 +60,6 @@ In order to do that, I’ve applied the **D**ependency inversion principle of SO
 
 It has the business-logic, knowns WHERE to ask for the data, it is the entry point of the **DATA** layer and acts as single source of truth for the **DOMAIN** layer. May contain 1-N data sources.
 
-I.e in the App, `CoinRepository` is subscribed to the current selected fiat currency [Flow](https://developer.android.com/kotlin/flow) from the local DataSource `CoinLocalDataSource`. Every time fiat currency changes, a new item is emitted and Repository reacts requesting the data 
+I.e in the App, `CoinRepository` is subscribed to the current selected fiat currency [Flow](https://developer.android.com/kotlin/flow) from the local DataSource `CoinLocalDataSource`. Every time fiat currency changes, a new item is emitted and Repository reacts requesting the data from remote DataSource `CoinRemoteDataSource`. 
+
+Repository is responsable to fetch data from remote 
