@@ -62,4 +62,6 @@ It has the business-logic, knowns WHERE to ask for the data, it is the entry poi
 
 I.e in the App, `CoinRepository` is subscribed to the current selected fiat currency [Flow](https://developer.android.com/kotlin/flow) from the local DataSource `CoinLocalDataSource`. Every time fiat currency changes, a new item is emitted and Repository reacts requesting the data from remote DataSource `CoinRemoteDataSource`. 
 
-Repository is responsable to fetch data from remote and save it locally if required, or retrieve data only from a specific datasource in some situations, whatever 
+Repository is responsable to fetch data from remote and save it locally if required, or retrieve data only from a specific datasource in some situations, whatever it is business-logic.
+
+![image](https://user-images.githubusercontent.com/12541369/155104082-9fbdf862-8967-46aa-b151-e6725
