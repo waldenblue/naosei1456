@@ -64,4 +64,9 @@ I.e in the App, `CoinRepository` is subscribed to the current selected fiat curr
 
 Repository is responsable to fetch data from remote and save it locally if required, or retrieve data only from a specific datasource in some situations, whatever it is business-logic.
 
-![image](https://user-images.githubusercontent.com/12541369/155104082-9fbdf862-8967-46aa-b151-e6725
+![image](https://user-images.githubusercontent.com/12541369/155104082-9fbdf862-8967-46aa-b151-e67255078c94.png)\
+<em>Request coins flow. (CoinLocalDataSource part is omitted)</em>
+
+## DOMAIN Layer.
+
+Simple layer but not
