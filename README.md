@@ -71,4 +71,4 @@ Repository is responsable to fetch data from remote and save it locally if requi
 
 Simple layer but not less important, It contains all the Dataset shared among all the App. In here exist the UseCase’s. 
 
-I understand the UseCase's a
+I understand the UseCase's as a bridge between **PRESENTATION ↔ DATA,** it’s an access point that **PRESENTATION layer** uses to communicate with th
