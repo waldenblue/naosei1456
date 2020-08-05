@@ -69,4 +69,6 @@ Repository is responsable to fetch data from remote and save it locally if requi
 
 ## DOMAIN Layer.
 
-Simple layer but not
+Simple layer but not less important, It contains all the Dataset shared among all the App. In here exist the UseCase’s. 
+
+I understand the UseCase's a
