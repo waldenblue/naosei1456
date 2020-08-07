@@ -72,4 +72,6 @@ Repository is responsable to fetch data from remote and save it locally if requi
 Simple layer but not less important, It contains all the Dataset shared among all the App. In here exist the UseCase’s. 
 
 I understand the UseCase's as a bridge between **PRESENTATION ↔ DATA,** it’s an access point that **PRESENTATION layer** uses to communicate with the business-logic.
-Pure Kotlin classes should be what we find here, being isolated from framework this layer remainds immutable when we change teconologies during the development (e.g. Start with SharedPreferences and then migrate to a SQL DB like Room
+Pure Kotlin classes should be what we find here, being isolated from framework this layer remainds immutable when we change teconologies during the development (e.g. Start with SharedPreferences and then migrate to a SQL DB like Room or migrating from classic Views to Compose UI).
+
+Here is where I change the current execution to an IO thread th
