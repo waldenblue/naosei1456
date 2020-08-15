@@ -76,4 +76,8 @@ Pure Kotlin classes should be what we find here, being isolated from framework t
 
 Here is where I change the current execution to an IO thread through [Coroutines Dispatchers](https://kotlinlang.org/docs/coroutine-context-and-dispatchers.html) by default. All the UseCase’s will go to background when executed before consulting **DATA** layer via repository. This will prevent any accidental long task execution in the MainThread afecting App performance and the UX. 
 
-UseCase's can also help to abstract common logic between features
+UseCase's can also help to abstract common logic between features if necessary, e.g. requesting data from 2 different Repositories.
+
+💡 PUBLIC METHODS OF DOMAIN AND DATA LAYERS ARE...
+
+- 
