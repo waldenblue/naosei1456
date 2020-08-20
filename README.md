@@ -80,4 +80,5 @@ UseCase's can also help to abstract common logic between features if necessary, 
 
 💡 PUBLIC METHODS OF DOMAIN AND DATA LAYERS ARE...
 
-- `suspend`. I consider [Kotlin Corroutines](https://developer.android.com/kotlin/coroutines) sufficiently integrated into our d
+- `suspend`. I consider [Kotlin Corroutines](https://developer.android.com/kotlin/coroutines) sufficiently integrated into our day to day to use them anywhere in the App.
+- Returning `Either` classes (from [Arrow](https://github.com/arrow-kt/arro
