@@ -87,4 +87,6 @@ A more functional and exception-free solution to return stuff 🙃.
 
 ## PRESENTATION Layer.
 
-The Views are built 
+The Views are built with [Jetpack Compose UI](https://developer.android.com/jetpack/compose). 
+
+The Presentation Pattern would be a Mode
