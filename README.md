@@ -89,4 +89,4 @@ A more functional and exception-free solution to return stuff 🙃.
 
 The Views are built with [Jetpack Compose UI](https://developer.android.com/jetpack/compose). 
 
-The Presentation Pattern would be a Model View ViewModel (MVVM) but since Compose UI is a new paradigm I’m not sure this is the most accurate defi
+The Presentation Pattern would be a Model View ViewModel (MVVM) but since Compose UI is a new paradigm I’m not sure this is the most accurate definition. I prefer to call it **Unidirectional data flow (UDF)** design pattern to be more precise (in ViewModel section I 
