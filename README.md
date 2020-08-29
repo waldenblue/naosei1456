@@ -95,4 +95,4 @@ This layer is made of the following classes:
 
 ### ViewModel.
 
-Extending from [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) of Android Architecure Components (Jetpack). Fits pre
+Extending from [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) of Android Architecure Components (Jetpack). Fits pretty well with the presentation pattern I’m using since it is Lifecycle-aware and survives configuration changes, has a build-in corou
