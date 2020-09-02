@@ -95,4 +95,6 @@ This layer is made of the following classes:
 
 ### ViewModel.
 
-Extending from [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) of Android Architecure Components (Jetpack). Fits pretty well with the presentation pattern I’m using since it is Lifecycle-aware and survives configuration changes, has a build-in coroutine scope ([ViewModelScope](https://developer.android.com/topic/libraries/architecture/coroutines#viewmodelscope)) which helps a lot when requesting data from UseCase’s and also works as [State Holder](https://developer.android.com/jetpack/compose/state#viewmodel
+Extending from [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) of Android Architecure Components (Jetpack). Fits pretty well with the presentation pattern I’m using since it is Lifecycle-aware and survives configuration changes, has a build-in coroutine scope ([ViewModelScope](https://developer.android.com/topic/libraries/architecture/coroutines#viewmodelscope)) which helps a lot when requesting data from UseCase’s and also works as [State Holder](https://developer.android.com/jetpack/compose/state#viewmodels-source-of-truth). It is the single source of truth for the UI.
+
+The responsibilities of these classes is
