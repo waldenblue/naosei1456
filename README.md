@@ -99,4 +99,4 @@ Extending from [ViewModel](https://developer.android.com/topic/libraries/archite
 
 The responsibilities of these classes is to connect with the business-logic through UseCase’s and update the UiState using the `Reducer`.
 
-> ViewModel has a singl
+> ViewModel has a single <em>public</em> property → `UiState`. It is a [MutableState](https://developer.android.com/reference/kotlin/androidx/compose/runtime/M
