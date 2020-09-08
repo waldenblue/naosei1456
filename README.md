@@ -107,4 +107,6 @@ At the same time Compose UI will be notifying the ViewModel through event callba
 
 I’ve taken the idea of Redux to transform Domain models into Ui-specific models.
 
-In a pure Redux stat
+In a pure Redux state machine there are 3 main pieces:
+
+- Store → Single source of truth, where the **State** is stored. If you realise, we 
