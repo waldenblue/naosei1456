@@ -102,3 +102,9 @@ The responsibilities of these classes is to connect with the business-logic thro
 > ViewModel has a single <em>public</em> property → `UiState`. It is a [MutableState](https://developer.android.com/reference/kotlin/androidx/compose/runtime/MutableState) class from Compose and it will be used to represent what to render in the UI. Compose UI *recomposes* every time the object updates. 
 At the same time Compose UI will be notifying the ViewModel through event callbacks corresponding to user actions or view changes, ViewModel will react to this updating back the `UiState` and provoking a *recomposition*. So here we have the UDF 🔁.
 > 
+
+### Reducer.
+
+I’ve taken the idea of Redux to transform Domain models into Ui-specific models.
+
+In a pure Redux stat
