@@ -113,4 +113,4 @@ In a pure Redux state machine there are 3 main pieces:
 - Action → It is the only way to change the **State**, an object describing what to do.
 - Reducer → The implementation of how the state is transformed by **Actions**
 
-As you can see, I’m using **A
+As you can see, I’m using **Action** and **Reducer** concepts which will be a key piece of our **UDF** pattern, there is no need t
