@@ -110,4 +110,7 @@ I’ve taken the idea of Redux to transform Domain models into Ui-specific model
 In a pure Redux state machine there are 3 main pieces:
 
 - Store → Single source of truth, where the **State** is stored. If you realise, we already have this piece in our architecture, the **ViewModel**.
-- Action → It is the only way to change the **State**, an o
+- Action → It is the only way to change the **State**, an object describing what to do.
+- Reducer → The implementation of how the state is transformed by **Actions**
+
+As you can see, I’m using **A
