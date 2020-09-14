@@ -115,4 +115,6 @@ In a pure Redux state machine there are 3 main pieces:
 
 As you can see, I’m using **Action** and **Reducer** concepts which will be a key piece of our **UDF** pattern, there is no need to create an extra **Store** object, **ViewModel** will take care of that by default without overloading it with more responsibilities.
 
-Reducer class will be open to recieve new **Actions**, also scales quite well always in the same 
+Reducer class will be open to recieve new **Actions**, also scales quite well always in the same way without breaking the current implementation, full-filling **O**pen-Closed principle of SOLID.
+
+### Co
