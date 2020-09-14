@@ -113,4 +113,6 @@ In a pure Redux state machine there are 3 main pieces:
 - Action → It is the only way to change the **State**, an object describing what to do.
 - Reducer → The implementation of how the state is transformed by **Actions**
 
-As you can see, I’m using **Action** and **Reducer** concepts which will be a key piece of our **UDF** pattern, there is no need to create an extra **Store** object, **ViewModel** will take care of that by default without overloading it with 
+As you can see, I’m using **Action** and **Reducer** concepts which will be a key piece of our **UDF** pattern, there is no need to create an extra **Store** object, **ViewModel** will take care of that by default without overloading it with more responsibilities.
+
+Reducer class will be open to recieve new **Actions**, also scales quite well always in the same 
