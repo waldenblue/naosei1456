@@ -117,4 +117,6 @@ As you can see, I’m using **Action** and **Reducer** concepts which will be a 
 
 Reducer class will be open to recieve new **Actions**, also scales quite well always in the same way without breaking the current implementation, full-filling **O**pen-Closed principle of SOLID.
 
-### Co
+### Compose UI.
+
+What to say! A new huge paradigm, I'm still in discovering mode and I think most of us find ourselves her, so I 
