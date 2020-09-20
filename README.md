@@ -119,4 +119,6 @@ Reducer class will be open to recieve new **Actions**, also scales quite well al
 
 ### Compose UI.
 
-What to say! A new huge paradigm, I'm still in discovering mode and I think most of us find ourselves her, so I 
+What to say! A new huge paradigm, I'm still in discovering mode and I think most of us find ourselves her, so I still have a long way to go 🚀. 
+
+Allows a really nice declarative way to define the UI in pure kotlin and really good i
