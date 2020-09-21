@@ -123,4 +123,4 @@ What to say! A new huge paradigm, I'm still in discovering mode and I think most
 
 Allows a really nice declarative way to define the UI in pure kotlin and really good in a matter of reusability.
 
-Compose simply renders what the `UiState` of ViewModel has, and it notifies the ViewModel th
+Compose simply renders what the `UiState` of ViewModel has, and it notifies the ViewModel the user interaction through callbacks and view changes. Therefore the UI has no more responsibilities, the fewerer the better.
