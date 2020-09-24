@@ -128,4 +128,10 @@ Compose simply renders what the `UiState` of ViewModel has, and it notifies the 
 > Since `UiState's` are pure [Data classes](https://kotlinlang.org/docs/data-classes.html), and may have more of them inside, I consider OK to use it in the following way (e.g.) → `uiState.coinSummary.allTimeHighPrice` without worrying about the [Law Of Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter), I hightlight, only in case of pure Data classes without any logic associated.
 > 
 
-![image](https://user-images.githubusercontent.com/12541369/155104232-b7371775-cbcb-4f98-882e-6b4c77b9747e.png
+![image](https://user-images.githubusercontent.com/12541369/155104232-b7371775-cbcb-4f98-882e-6b4c77b9747e.png)
+
+<em>Happy path example of Coin Detail screen. (Loading and error renderings are omited.)</em>
+
+# Dependency Injection.
+
+[Dagger 
