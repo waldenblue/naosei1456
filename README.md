@@ -134,4 +134,4 @@ Compose simply renders what the `UiState` of ViewModel has, and it notifies the 
 
 # Dependency Injection.
 
-[Dagger Hilt](https://developer.android.com/training/dependency-injection/hilt-android), the Android-specific implementation of 
+[Dagger Hilt](https://developer.android.com/training/dependency-injection/hilt-android), the Android-specific implementation of [Dagger](https://dagger.dev/), finally we can scape from the Dagger complexity thanks to something simplier, more
