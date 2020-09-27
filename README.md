@@ -134,4 +134,4 @@ Compose simply renders what the `UiState` of ViewModel has, and it notifies the 
 
 # Dependency Injection.
 
-[Dagger 
+[Dagger Hilt](https://developer.android.com/training/dependency-injection/hilt-android), the Android-specific implementation of 
