@@ -136,4 +136,4 @@ Compose simply renders what the `UiState` of ViewModel has, and it notifies the 
 
 [Dagger Hilt](https://developer.android.com/training/dependency-injection/hilt-android), the Android-specific implementation of [Dagger](https://dagger.dev/), finally we can scape from the Dagger complexity thanks to something simplier, more clear and just as useful! 
 
-Having containers (Modules) which provides the dependencies for every class reduces a lot of
+Having containers (Modules) which provides the dependencies for every class reduces a lot of boilerplate than if you did it by hand, at the same time classes won't have to worry about providing their own dependencies an
