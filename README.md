@@ -138,4 +138,8 @@ Compose simply renders what the `UiState` of ViewModel has, and it notifies the 
 
 Having containers (Modules) which provides the dependencies for every class reduces a lot of boilerplate than if you did it by hand, at the same time classes won't have to worry about providing their own dependencies and best of all, provide those dependencies mocked when testing will be trivial.
 
-Use a [DI](https://en.wikipedia.or
+Use a [DI](https://en.wikipedia.org/wiki/Dependency_injection) library is almost a must!
+
+# Modulation or Monolith?
+
+It’s just a balance in between how big is/will be th
