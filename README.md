@@ -142,4 +142,6 @@ Use a [DI](https://en.wikipedia.org/wiki/Dependency_injection) library is almost
 
 # Modulation or Monolith?
 
-It’s just a balance in between how big is/will be th
+It’s just a balance in between how big is/will be the app, how many people will work on it and the development time we have.
+
+Modulation has several benefits, like when you change a file not
