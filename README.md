@@ -144,4 +144,6 @@ Use a [DI](https://en.wikipedia.org/wiki/Dependency_injection) library is almost
 
 It’s just a balance in between how big is/will be the app, how many people will work on it and the development time we have.
 
-Modulation has several benefits, like when you change a file not the whole project is recompiled but only the affected parts, also creates an extra level of abstraction and boundaries between the di
+Modulation has several benefits, like when you change a file not the whole project is recompiled but only the affected parts, also creates an extra level of abstraction and boundaries between the different App pieces, which favors work in parallel because modules remain completely isoleted from each other.
+
+For this App I've choose
