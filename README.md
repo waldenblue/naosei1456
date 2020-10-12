@@ -146,4 +146,4 @@ It’s just a balance in between how big is/will be the app, how many people wil
 
 Modulation has several benefits, like when you change a file not the whole project is recompiled but only the affected parts, also creates an extra level of abstraction and boundaries between the different App pieces, which favors work in parallel because modules remain completely isoleted from each other.
 
-For this App I've choose
+For this App I've choosed a monolith, I think it's faster to review 😃 but... In case of need to modulate, I’d consider two different scenario
