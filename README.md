@@ -151,4 +151,4 @@ For this App I've choosed a monolith, I think it's faster to review 😃 but... 
 1. Modularised by arch. layer (DATA, DOMAIN and PRESENTATION).
 2. Modularised by features.
 
-In my opinion, option 1 could be a little bit *over-engineered*, having different modules for each layer of every feature may complicate the stu
+In my opinion, option 1 could be a little bit *over-engineered*, having different modules for each layer of every feature may complicate the stuff, I'm not sure if this would scale well since every new feature added will cost too much effort besides increasing syn
