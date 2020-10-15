@@ -155,4 +155,5 @@ In my opinion, option 1 could be a little bit *over-engineered*, having differen
 
 I would take option 2.
 
-<img width="384" alt="image" src="https://user-images.githubuser
+<img width="384" alt="image" src="https://user-images.githubusercontent.com/12541369/155105381-e12de03b-79b4-4371-9572-533a3fd390ec.png">\
+<em>App modularized by features</em
