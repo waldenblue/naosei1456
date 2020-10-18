@@ -160,4 +160,4 @@ I would take option 2.
 
 # Navigation.
 
-Compose can change the way of how we implement the Android Framework classes. I found very natural to use a singl
+Compose can change the way of how we implement the Android Framework classes. I found very natural to use a single-activity scheme (at least with this small App) and thanks to [Jetpack Navigation with compose](https://developer.a
