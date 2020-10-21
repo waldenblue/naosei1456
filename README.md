@@ -162,4 +162,7 @@ I would take option 2.
 
 Compose can change the way of how we implement the Android Framework classes. I found very natural to use a single-activity scheme (at least with this small App) and thanks to [Jetpack Navigation with compose](https://developer.android.com/jetpack/compose/navigation) we can just navigate between composables instead of the traditional approach of a new Activity/Fragment per screen. As far as I could see, it’s easy to implement and scales pretty well.
 
-I’ve created a `NavRoute` class which helps to isolate the Navigation definition logic making easy to reuse and scale every time new
+I’ve created a `NavRoute` class which helps to isolate the Navigation definition logic making easy to reuse and scale every time new screens are required.
+
+# Testing.
+I've choosed [MockK](https://mockk.io/) for mocking, building scenarios and verifing in Unit Tests, desig
