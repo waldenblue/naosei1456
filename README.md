@@ -170,4 +170,4 @@ I've choosed [MockK](https://mockk.io/) for mocking, building scenarios and veri
 `ViewModels`, `Reducers`, `UseCases`, and the `Repository` have been fully unitary tested.
 The classic Given-When-Then (GWT) semi-structure is what you are going to find. Both happy and unhappy paths are tested.
 
-As you will see, `TestCoroutineDispatchers` class is rep
+As you will see, `TestCoroutineDispatchers` class is replacing `CoroutineDispatchers` class that `UseCases` have. Doing so I can run all the suspending functions in the <em>Unco
