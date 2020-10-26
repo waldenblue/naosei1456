@@ -175,3 +175,6 @@ As you will see, `TestCoroutineDispatchers` class is replacing `CoroutineDispatc
 # Licence.
 
     Copyright 2022 Ricard Aparicio.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in c
