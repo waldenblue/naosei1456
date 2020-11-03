@@ -18,4 +18,7 @@ class ExampleInstrumentedTest {
     @Test
     fun useAppContext() {
         // Context of the app under test.
-        val appContext = InstrumentationRegistry.getInstrumentation().t
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        assertEquals("com.ricardaparicio.cryptodemo", appContext.packageName)
+    }
+}
