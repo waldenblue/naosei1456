@@ -16,4 +16,7 @@
 package com.ricardaparicio.cryptodemo
 
 import android.os.Bundle
-import androidx.activ
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.material.ExperimentalMaterialApi
+import an
