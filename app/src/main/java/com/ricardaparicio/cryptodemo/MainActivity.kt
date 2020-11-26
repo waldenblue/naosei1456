@@ -24,4 +24,5 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.ric
+import com.ricardaparicio.cryptodemo.core.navigation.NavRoute
+import com.ricardaparicio.cryptodemo.features.coindetail.presentatio
