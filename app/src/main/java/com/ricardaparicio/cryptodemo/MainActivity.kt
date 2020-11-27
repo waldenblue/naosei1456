@@ -27,4 +27,7 @@ import androidx.navigation.compose.rememberNavController
 import com.ricardaparicio.cryptodemo.core.navigation.NavRoute
 import com.ricardaparicio.cryptodemo.features.coindetail.presentation.ui.CoinDetailScreen
 import com.ricardaparicio.cryptodemo.features.coinlist.presentation.ui.CoinListScreen
-import
+import com.ricardaparicio.cryptodemo.theme.CryptoDemoTheme
+import dagger.hilt.android.AndroidEntryPoint
+
+@Expe
