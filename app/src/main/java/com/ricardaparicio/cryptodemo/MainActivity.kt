@@ -30,4 +30,7 @@ import com.ricardaparicio.cryptodemo.features.coinlist.presentation.ui.CoinListS
 import com.ricardaparicio.cryptodemo.theme.CryptoDemoTheme
 import dagger.hilt.android.AndroidEntryPoint
 
-@Expe
+@ExperimentalMaterialApi
+@AndroidEntryPoint
+class MainActivity : ComponentActivity() {
+    override fun onCreate(sav
