@@ -37,4 +37,13 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CryptoDemoTheme {
-      
+                NavigationHost()
+            }
+        }
+    }
+}
+
+@ExperimentalMaterialApi
+@Composable
+fun NavigationHost(
+    navCo
