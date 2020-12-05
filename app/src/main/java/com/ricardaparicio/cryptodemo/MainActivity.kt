@@ -46,4 +46,7 @@ class MainActivity : ComponentActivity() {
 @ExperimentalMaterialApi
 @Composable
 fun NavigationHost(
-    navCo
+    navController: NavHostController = rememberNavController(),
+) {
+    NavHost(
+        navController = navController
