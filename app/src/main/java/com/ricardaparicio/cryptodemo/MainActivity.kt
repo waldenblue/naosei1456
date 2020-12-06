@@ -49,4 +49,8 @@ fun NavigationHost(
     navController: NavHostController = rememberNavController(),
 ) {
     NavHost(
-        navController = navController
+        navController = navController,
+        startDestination = NavRoute.CoinList.destination,
+    ) {
+        composable(
+            route = NavRou
