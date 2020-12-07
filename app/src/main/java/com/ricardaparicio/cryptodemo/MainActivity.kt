@@ -57,4 +57,9 @@ fun NavigationHost(
         ) {
             CoinListScreen { coinSummary ->
                 navController.navigate(
-        
+                    NavRoute.CoinDetail.route(coinSummary.id)
+                )
+            }
+        }
+        composable(
+            route = NavRoute.Coin
