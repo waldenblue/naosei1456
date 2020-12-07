@@ -53,4 +53,8 @@ fun NavigationHost(
         startDestination = NavRoute.CoinList.destination,
     ) {
         composable(
-            route = NavRou
+            route = NavRoute.CoinList.destination,
+        ) {
+            CoinListScreen { coinSummary ->
+                navController.navigate(
+        
