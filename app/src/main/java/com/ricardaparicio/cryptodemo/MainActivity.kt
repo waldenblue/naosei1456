@@ -65,4 +65,10 @@ fun NavigationHost(
             route = NavRoute.CoinDetail.destination,
             arguments = NavRoute.CoinDetail.args,
         ) {
-            CoinDetailScre
+            CoinDetailScreen {
+                navController.popBackStack()
+            }
+        }
+    }
+}
+
