@@ -62,4 +62,7 @@ fun NavigationHost(
             }
         }
         composable(
-            route = NavRoute.Coin
+            route = NavRoute.CoinDetail.destination,
+            arguments = NavRoute.CoinDetail.args,
+        ) {
+            CoinDetailScre
