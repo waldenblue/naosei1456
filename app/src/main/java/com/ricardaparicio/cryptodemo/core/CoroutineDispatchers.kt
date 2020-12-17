@@ -13,4 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ricardaparicio.c
+package com.ricardaparicio.cryptodemo.core
+
+import kotlinx.coroutines.CoroutineDispatcher
+
+interface CoroutineDispatchers {
+    va
