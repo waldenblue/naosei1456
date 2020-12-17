@@ -18,4 +18,6 @@ package com.ricardaparicio.cryptodemo.core
 import kotlinx.coroutines.CoroutineDispatcher
 
 interface CoroutineDispatchers {
-    va
+    val io: CoroutineDispatcher
+    val main: CoroutineDispatcher
+}
