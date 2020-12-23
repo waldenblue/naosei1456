@@ -17,4 +17,6 @@ package com.ricardaparicio.cryptodemo.core
 
 sealed interface Failure
 
-object NetworkingE
+object NetworkingError : Failure
+object ServerError : Failure
+object LocalError : Failure
