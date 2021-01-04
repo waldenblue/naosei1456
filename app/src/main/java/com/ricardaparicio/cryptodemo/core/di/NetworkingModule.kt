@@ -17,4 +17,8 @@ package com.ricardaparicio.cryptodemo.core.di
 
 import com.ricardaparicio.cryptodemo.core.networking.loggingInterceptor
 import dagger.Module
-import dagger.Pr
+import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+import okhttp3.OkHttpClient
+i
