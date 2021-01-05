@@ -27,4 +27,8 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkingModule {
 
-    @Singl
+    @Singleton
+    @Provides
+    fun provideOkHttpClient(): OkHttpClient =
+        OkHttpClient.Builder()
+            .addIntercep
