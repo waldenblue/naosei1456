@@ -28,4 +28,9 @@ import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
-@Modu
+@Module
+object PersistenceModule {
+
+    @Singleton
+    @Provides
+    fun providePreferencesDataStore(@ApplicationContext appContext: Context): 
