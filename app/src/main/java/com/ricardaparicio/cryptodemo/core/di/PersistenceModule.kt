@@ -33,4 +33,6 @@ object PersistenceModule {
 
     @Singleton
     @Provides
-    fun providePreferencesDataStore(@ApplicationContext appContext: Context): 
+    fun providePreferencesDataStore(@ApplicationContext appContext: Context): DataStore<Preferences> =
+        PreferenceDataStoreFactory.create(
+            produceFile = { appContext.preferencesDataStoreFile(COIN_PREFERENCE
