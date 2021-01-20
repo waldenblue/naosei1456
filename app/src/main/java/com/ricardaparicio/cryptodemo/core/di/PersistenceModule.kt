@@ -35,4 +35,8 @@ object PersistenceModule {
     @Provides
     fun providePreferencesDataStore(@ApplicationContext appContext: Context): DataStore<Preferences> =
         PreferenceDataStoreFactory.create(
-            produceFile = { appContext.preferencesDataStoreFile(COIN_PREFERENCE
+            produceFile = { appContext.preferencesDataStoreFile(COIN_PREFERENCES_FILE) }
+        )
+
+    private const val COIN_PREFERENCES_FILE = "coin_preferences_file"
+}
