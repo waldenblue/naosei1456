@@ -15,4 +15,6 @@
  */
 package com.ricardaparicio.cryptodemo.core.navigation
 
-import
+import androidx.navigation.NamedNavArgument
+import androidx.navigation.NavType
+import androidx.navigation.navArgument
