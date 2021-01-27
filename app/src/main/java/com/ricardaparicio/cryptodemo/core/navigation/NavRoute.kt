@@ -21,4 +21,7 @@ import androidx.navigation.navArgument
 
 sealed class NavRoute(
     private val baseRoute: String,
-    private val navArgs: List<NavArg> = emptyLis
+    private val navArgs: List<NavArg> = emptyList(),
+) {
+    object CoinList : NavRoute("coinList")
+    object CoinDetail : NavRoute("coinDetail", listOf(NavArg.CoinI
