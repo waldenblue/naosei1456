@@ -18,3 +18,7 @@ package com.ricardaparicio.cryptodemo.core.navigation
 import androidx.navigation.NamedNavArgument
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
+
+sealed class NavRoute(
+    private val baseRoute: String,
+    private val navArgs: List<NavArg> = emptyLis
