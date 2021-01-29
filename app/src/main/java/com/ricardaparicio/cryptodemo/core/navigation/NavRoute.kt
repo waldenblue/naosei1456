@@ -24,4 +24,8 @@ sealed class NavRoute(
     private val navArgs: List<NavArg> = emptyList(),
 ) {
     object CoinList : NavRoute("coinList")
-    object CoinDetail : NavRoute("coinDetail", listOf(NavArg.CoinI
+    object CoinDetail : NavRoute("coinDetail", listOf(NavArg.CoinId))
+
+    val args: List<NamedNavArgument> = navArgs.map { navArg ->
+        navArgument(navArg.key) {
+            
