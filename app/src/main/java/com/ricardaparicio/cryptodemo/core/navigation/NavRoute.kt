@@ -28,4 +28,10 @@ sealed class NavRoute(
 
     val args: List<NamedNavArgument> = navArgs.map { navArg ->
         navArgument(navArg.key) {
-            
+            type = navArg.type
+        }
+    }
+
+    fun route(vararg args: String = emptyArray()): String =
+        buildList {
+ 
