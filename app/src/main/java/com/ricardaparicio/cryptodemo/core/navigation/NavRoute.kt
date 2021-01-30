@@ -34,4 +34,9 @@ sealed class NavRoute(
 
     fun route(vararg args: String = emptyArray()): String =
         buildList {
- 
+            add(baseRoute)
+            addAll(args)
+        }.joinToString("/")
+
+    val destination: String = run {
+      
