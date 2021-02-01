@@ -39,4 +39,7 @@ sealed class NavRoute(
         }.joinToString("/")
 
     val destination: String = run {
-      
+        val argKeys = navArgs.map { navArg -> "{${navArg.key}}" }
+        buildList {
+            add(baseRoute)
+         
