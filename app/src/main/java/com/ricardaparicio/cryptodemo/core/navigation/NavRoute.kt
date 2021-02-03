@@ -42,4 +42,9 @@ sealed class NavRoute(
         val argKeys = navArgs.map { navArg -> "{${navArg.key}}" }
         buildList {
             add(baseRoute)
-         
+            addAll(argKeys)
+        }.joinToString("/")
+    }
+}
+
+enum class NavArg(val key: String, val type: NavT
