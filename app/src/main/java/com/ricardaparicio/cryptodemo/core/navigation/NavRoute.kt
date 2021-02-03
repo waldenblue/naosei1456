@@ -47,4 +47,6 @@ sealed class NavRoute(
     }
 }
 
-enum class NavArg(val key: String, val type: NavT
+enum class NavArg(val key: String, val type: NavType<*>) {
+    CoinId("coinId", NavType.StringType),
+}
