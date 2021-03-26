@@ -16,4 +16,9 @@
 package com.ricardaparicio.cryptodemo.core.networking
 
 import com.orhanobut.logger.BuildConfig
-import
+import okhttp3.logging.HttpLoggingInterceptor
+import timber.log.Timber
+
+private const val LOGGING_TAG = "ApiLog"
+
+val loggingIntercep
