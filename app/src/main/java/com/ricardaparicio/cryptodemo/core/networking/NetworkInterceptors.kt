@@ -21,4 +21,8 @@ import timber.log.Timber
 
 private const val LOGGING_TAG = "ApiLog"
 
-val loggingIntercep
+val loggingInterceptor
+    get() =
+        HttpLoggingInterceptor { message ->
+            Timber.tag(LOGGING_TAG).d(message)
+        }.apply 
