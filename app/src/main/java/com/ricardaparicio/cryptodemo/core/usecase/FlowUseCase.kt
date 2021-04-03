@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2022 Ricard Aparicio
 
@@ -13,22 +14,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ricardaparicio.cryptodemo.core.networking
+package com.ricardaparicio.cryptodemo.core.usecase
 
-import com.orhanobut.logger.BuildConfig
-import okhttp3.logging.HttpLoggingInterceptor
-import timber.log.Timber
+import arrow.core.Either
+import com.ricardaparicio.cryptodemo.core.CoroutineDispatchers
+import com.ricardaparicio.cryptodemo.core.Failure
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flowOn
 
-private const val LOGGING_TAG = "ApiLog"
+abstract class FlowUseCase<P : UseCaseParams, R : UseCaseResult>(
+    private val dispatchers: CoroutineDispatchers
+) {
+    operator fun invoke(params: P): Flow<Either<Failure, R>> = doWork(params).flowOn(dispatchers.io)
 
-val loggingInterceptor
-    get() =
-        HttpLoggingInterceptor { message ->
-            Timber.tag(LOGGING_TAG).d(message)
-        }.apply {
-            level = when (BuildConfig.DEBUG) {
-                true -> HttpLoggingInterceptor.Level.BODY
-                false -> HttpLoggingInterceptor.Level.NONE
-            }
-        }
-
+    abstract fun doWork(params: P): Flow<Either<Failure, R>>
+}
