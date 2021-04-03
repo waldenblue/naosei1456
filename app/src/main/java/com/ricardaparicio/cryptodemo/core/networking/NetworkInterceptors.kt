@@ -25,4 +25,7 @@ val loggingInterceptor
     get() =
         HttpLoggingInterceptor { message ->
             Timber.tag(LOGGING_TAG).d(message)
-        }.apply 
+        }.apply {
+            level = when (BuildConfig.DEBUG) {
+                true -> HttpLoggingInterceptor.Level.BODY
+    
