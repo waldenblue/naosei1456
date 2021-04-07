@@ -28,3 +28,17 @@ import com.ricardaparicio.cryptodemo.features.common.data.repository.CoinReposit
 import com.ricardaparicio.cryptodemo.features.common.domain.model.Coin
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
+
+class GetCoinUseCase @Inject constructor(
+    private val coinRepository: CoinRepository,
+    dispatchers: CoroutineDispatchers,
+) : UseCase<Params, Result>(dispatchers) {
+
+    data class Result(val coin: Coin) : UseCaseResult
+    data class Params(val coinId: String) : UseCaseParams
+
+    override suspend fun doWork(params: Params): Either<Failure, Result> =
+        coinRepository.getCoin(params.coinId).map { coin ->
+            Result(coin)
+        }
+}
