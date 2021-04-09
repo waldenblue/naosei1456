@@ -16,4 +16,6 @@
 package com.ricardaparicio.cryptodemo.features.coindetail.presentation.reducer
 
 import com.ricardaparicio.cryptodemo.core.Reducer
-import com.ricardaparicio.crypto
+import com.ricardaparicio.cryptodemo.core.UiAction
+import com.ricardaparicio.cryptodemo.core.util.formatPercentage
+import com.ricardaparicio.
