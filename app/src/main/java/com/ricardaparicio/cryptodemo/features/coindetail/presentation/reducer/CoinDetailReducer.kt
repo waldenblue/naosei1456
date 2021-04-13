@@ -20,4 +20,5 @@ import com.ricardaparicio.cryptodemo.core.UiAction
 import com.ricardaparicio.cryptodemo.core.util.formatPercentage
 import com.ricardaparicio.cryptodemo.core.util.formatPrice
 import com.ricardaparicio.cryptodemo.features.common.domain.model.Coin
-import com.
+import com.ricardaparicio.cryptodemo.features.common.ui.model.CoinSummaryUiModel
+import com.ricardaparicio.cryptodemo.features.common.ui.viewmodel.ContentLoa
