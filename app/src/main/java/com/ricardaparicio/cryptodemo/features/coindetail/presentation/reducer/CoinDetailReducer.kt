@@ -23,4 +23,7 @@ import com.ricardaparicio.cryptodemo.features.common.domain.model.Coin
 import com.ricardaparicio.cryptodemo.features.common.ui.model.CoinSummaryUiModel
 import com.ricardaparicio.cryptodemo.features.common.ui.viewmodel.ContentLoadingReducer
 import com.ricardaparicio.cryptodemo.features.common.ui.viewmodel.ContentLoadingUiAction
-import com.ricardap
+import com.ricardaparicio.cryptodemo.features.coindetail.presentation.ui.CoinDetailUiState
+import javax.inject.Inject
+
+sealed cl
