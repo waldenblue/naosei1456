@@ -28,4 +28,8 @@ import javax.inject.Inject
 
 sealed class CoinDetailUiAction : UiAction {
     data class NewCoin(val coin: Coin) : CoinDetailUiAction()
-    data class UpdateContentLoading(
+    data class UpdateContentLoading(val action: ContentLoadingUiAction) : CoinDetailUiAction()
+}
+
+class CoinDetailReducer @Inject constructor(
+    contentLoading
