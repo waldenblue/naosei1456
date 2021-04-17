@@ -26,4 +26,6 @@ import com.ricardaparicio.cryptodemo.features.common.ui.viewmodel.ContentLoading
 import com.ricardaparicio.cryptodemo.features.coindetail.presentation.ui.CoinDetailUiState
 import javax.inject.Inject
 
-sealed cl
+sealed class CoinDetailUiAction : UiAction {
+    data class NewCoin(val coin: Coin) : CoinDetailUiAction()
+    data class UpdateContentLoading(
