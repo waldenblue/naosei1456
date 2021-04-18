@@ -38,4 +38,6 @@ class CoinDetailReducer @Inject constructor(
     override val reduce: (CoinDetailUiState, CoinDetailUiAction) -> CoinDetailUiState =
         { state, action ->
             when (action) {
-        
+                is CoinDetailUiAction.NewCoin -> {
+                    val coin = action.coin
+                    val fiatCurrency = coin.coinSumm
