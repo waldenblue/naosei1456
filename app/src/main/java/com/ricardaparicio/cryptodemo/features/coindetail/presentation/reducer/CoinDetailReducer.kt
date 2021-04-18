@@ -35,4 +35,7 @@ class CoinDetailReducer @Inject constructor(
     contentLoadingReducer: ContentLoadingReducer
 ) : Reducer<CoinDetailUiState, CoinDetailUiAction> {
 
-    override val reduce: (Coin
+    override val reduce: (CoinDetailUiState, CoinDetailUiAction) -> CoinDetailUiState =
+        { state, action ->
+            when (action) {
+        
