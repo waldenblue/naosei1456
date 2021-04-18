@@ -32,4 +32,7 @@ sealed class CoinDetailUiAction : UiAction {
 }
 
 class CoinDetailReducer @Inject constructor(
-    contentLoading
+    contentLoadingReducer: ContentLoadingReducer
+) : Reducer<CoinDetailUiState, CoinDetailUiAction> {
+
+    override val reduce: (Coin
