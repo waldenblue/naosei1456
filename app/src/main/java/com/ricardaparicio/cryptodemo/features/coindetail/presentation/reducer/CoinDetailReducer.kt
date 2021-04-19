@@ -40,4 +40,6 @@ class CoinDetailReducer @Inject constructor(
             when (action) {
                 is CoinDetailUiAction.NewCoin -> {
                     val coin = action.coin
-                    val fiatCurrency = coin.coinSumm
+                    val fiatCurrency = coin.coinSummary.fiatCurrency
+                    state.copy(
+                        coinSummary = CoinSummaryUiModel.from(coin.coinSum
