@@ -45,3 +45,5 @@ class CoinDetailReducer @Inject constructor(
                         coinSummary = CoinSummaryUiModel.from(coin.coinSummary),
                         description = coin.description,
                         ath = coin.ath.formatPrice(fiatCurrency),
+                        marketCap = coin.marketCap.formatPrice(fiatCurrency),
+                        priceChange24h = coin.priceChange24
