@@ -42,4 +42,6 @@ class CoinDetailReducer @Inject constructor(
                     val coin = action.coin
                     val fiatCurrency = coin.coinSummary.fiatCurrency
                     state.copy(
-                        coinSummary = CoinSummaryUiModel.from(coin.coinSum
+                        coinSummary = CoinSummaryUiModel.from(coin.coinSummary),
+                        description = coin.description,
+                        ath = coin.ath.formatPrice(fiatCurrency),
