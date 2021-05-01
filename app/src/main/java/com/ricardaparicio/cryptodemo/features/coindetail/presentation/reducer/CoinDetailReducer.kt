@@ -47,4 +47,7 @@ class CoinDetailReducer @Inject constructor(
                         ath = coin.ath.formatPrice(fiatCurrency),
                         marketCap = coin.marketCap.formatPrice(fiatCurrency),
                         priceChange24h = coin.priceChange24h.formatPrice(fiatCurrency),
-                        priceChangePercentage24h = coin.priceChangePercentage24h.for
+                        priceChangePercentage24h = coin.priceChangePercentage24h.formatPercentage(),
+                    )
+                }
+                is CoinDetailUiAction.UpdateCo
