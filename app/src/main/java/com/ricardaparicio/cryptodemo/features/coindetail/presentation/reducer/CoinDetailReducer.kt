@@ -50,4 +50,6 @@ class CoinDetailReducer @Inject constructor(
                         priceChangePercentage24h = coin.priceChangePercentage24h.formatPercentage(),
                     )
                 }
-                is CoinDetailUiAction.UpdateCo
+                is CoinDetailUiAction.UpdateContentLoading -> {
+                    state.copy(
+                        contentLoadingUiState = contentLoadi
