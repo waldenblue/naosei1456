@@ -52,4 +52,7 @@ class CoinDetailReducer @Inject constructor(
                 }
                 is CoinDetailUiAction.UpdateContentLoading -> {
                     state.copy(
-                        contentLoadingUiState = contentLoadi
+                        contentLoadingUiState = contentLoadingReducer.reduce(
+                            state.contentLoadingUiState,
+                            action.action
+        
