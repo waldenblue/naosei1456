@@ -55,4 +55,10 @@ class CoinDetailReducer @Inject constructor(
                         contentLoadingUiState = contentLoadingReducer.reduce(
                             state.contentLoadingUiState,
                             action.action
-        
+                        )
+                    )
+                }
+
+            }
+        }
+}
