@@ -13,4 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ricardaparicio.cryptodemo.features.coindetail.presenta
+package com.ricardaparicio.cryptodemo.features.coindetail.presentation.ui
+
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ExitTransition
+import androidx.comp
