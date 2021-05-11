@@ -17,4 +17,6 @@ package com.ricardaparicio.cryptodemo.features.coindetail.presentation.ui
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.ExitTransition
-import androidx.comp
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
+import androidx.compose.fou
