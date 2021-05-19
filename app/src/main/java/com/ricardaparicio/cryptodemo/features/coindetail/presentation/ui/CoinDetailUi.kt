@@ -40,4 +40,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import coil.compose.rememberImag
+import coil.compose.rememberImagePainter
+import com.ricardaparicio.cryptodemo.R
+import com.ricardaparicio.cryptodemo.core.util.Block
+import com.ricardaparicio.
