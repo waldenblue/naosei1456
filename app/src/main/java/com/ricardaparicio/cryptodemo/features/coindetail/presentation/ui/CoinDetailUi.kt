@@ -43,4 +43,5 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberImagePainter
 import com.ricardaparicio.cryptodemo.R
 import com.ricardaparicio.cryptodemo.core.util.Block
-import com.ricardaparicio.
+import com.ricardaparicio.cryptodemo.features.common.ui.AlertError
+import com.ricardaparicio.cryptodemo.features.coindetail.presentation.viewmodel.Coin
