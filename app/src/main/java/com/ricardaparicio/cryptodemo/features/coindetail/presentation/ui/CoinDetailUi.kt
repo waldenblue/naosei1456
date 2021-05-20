@@ -52,4 +52,6 @@ import com.ricardaparicio.cryptodemo.theme.Boulder
 fun CoinDetailScreen(onBackClicked: Block) {
     val viewModel = hiltViewModel<CoinDetailViewModel>()
     CoinDetail(
-        uiState = viewMode
+        uiState = viewModel.uiState,
+        onBackClicked = onBackClicked,
+        onClickDismissError = viewModel::onDismissDialogReques
