@@ -54,4 +54,12 @@ fun CoinDetailScreen(onBackClicked: Block) {
     CoinDetail(
         uiState = viewModel.uiState,
         onBackClicked = onBackClicked,
-        onClickDismissError = viewModel::onDismissDialogReques
+        onClickDismissError = viewModel::onDismissDialogRequested
+    )
+}
+
+@ExperimentalMaterialApi
+@Composable
+private fun CoinDetail(
+    uiState: CoinDetailUiState,
+    onBac
