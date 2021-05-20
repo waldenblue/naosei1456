@@ -49,4 +49,7 @@ import com.ricardaparicio.cryptodemo.theme.Boulder
 
 @ExperimentalMaterialApi
 @Composable
-fun CoinDetailScreen(onBackClic
+fun CoinDetailScreen(onBackClicked: Block) {
+    val viewModel = hiltViewModel<CoinDetailViewModel>()
+    CoinDetail(
+        uiState = viewMode
