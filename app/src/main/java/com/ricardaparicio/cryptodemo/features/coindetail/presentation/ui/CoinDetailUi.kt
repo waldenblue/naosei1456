@@ -62,4 +62,10 @@ fun CoinDetailScreen(onBackClicked: Block) {
 @Composable
 private fun CoinDetail(
     uiState: CoinDetailUiState,
-    onBac
+    onBackClicked: Block,
+    onClickDismissError: Block,
+) {
+
+    val lazyListState = rememberLazyListState()
+
+    val app
