@@ -68,4 +68,5 @@ private fun CoinDetail(
 
     val lazyListState = rememberLazyListState()
 
-    val app
+    val appBarVisibility = when (lazyListState.firstVisibleItemIndex) {
+        0 -> lazyListState.firstVisibleItemS
