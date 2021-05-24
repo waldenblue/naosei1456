@@ -77,4 +77,10 @@ private fun CoinDetail(
         else -> true
     }
     Box(
-        modifier = Modi
+        modifier = Modifier
+            .fillMaxWidth()
+            .fillMaxHeight(),
+    ) {
+        Content(
+            uiState = uiState,
+       
