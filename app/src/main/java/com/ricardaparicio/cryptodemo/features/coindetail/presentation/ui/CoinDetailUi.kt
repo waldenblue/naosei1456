@@ -69,4 +69,7 @@ private fun CoinDetail(
     val lazyListState = rememberLazyListState()
 
     val appBarVisibility = when (lazyListState.firstVisibleItemIndex) {
-        0 -> lazyListState.firstVisibleItemS
+        0 -> lazyListState.firstVisibleItemScrollOffset > 400f
+        else -> true
+    }
+    val appBarTitleVisibility = when (lazyListState.firstVisibleItemInd
