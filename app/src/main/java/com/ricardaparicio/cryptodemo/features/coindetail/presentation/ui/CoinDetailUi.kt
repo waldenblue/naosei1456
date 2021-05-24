@@ -83,4 +83,7 @@ private fun CoinDetail(
     ) {
         Content(
             uiState = uiState,
-       
+            lazyListState = lazyListState,
+        )
+        CollapsibleAppBar(
+            title = uiState.coinSummary.name
