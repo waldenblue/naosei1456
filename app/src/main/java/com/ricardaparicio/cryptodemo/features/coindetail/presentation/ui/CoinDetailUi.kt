@@ -97,4 +97,5 @@ private fun CoinDetail(
                 onBackClicked()
             }
         }
-   
+        if (uiState.contentLoadingUiState.loading) {
+            LinearProgressIndicator(modifier = Modifier.fillMaxWidt
