@@ -90,4 +90,11 @@ private fun CoinDetail(
             appBarVisibility = appBarVisibility,
             titleVisibility = appBarTitleVisibility
         ) {
-            onBa
+            onBackClicked()
+        }
+        if (!appBarVisibility) {
+            FloatingBackIcon {
+                onBackClicked()
+            }
+        }
+   
