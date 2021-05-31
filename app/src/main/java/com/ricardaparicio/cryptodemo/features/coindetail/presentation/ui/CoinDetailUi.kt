@@ -98,4 +98,9 @@ private fun CoinDetail(
             }
         }
         if (uiState.contentLoadingUiState.loading) {
-            LinearProgressIndicator(modifier = Modifier.fillMaxWidt
+            LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+        }
+
+        uiState.contentLoadingUiState.error?.let {
+            AlertError(
+                modifier =
