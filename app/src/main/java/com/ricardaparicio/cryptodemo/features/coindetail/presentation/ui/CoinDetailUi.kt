@@ -106,4 +106,12 @@ private fun CoinDetail(
                 modifier = Modifier.align(Alignment.Center),
                 model = uiState.contentLoadingUiState.error
             ) {
-  
+                onClickDismissError()
+            }
+        }
+    }
+}
+
+@ExperimentalMaterialApi
+@Composable
+priva
