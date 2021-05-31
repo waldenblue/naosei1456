@@ -103,4 +103,7 @@ private fun CoinDetail(
 
         uiState.contentLoadingUiState.error?.let {
             AlertError(
-                modifier =
+                modifier = Modifier.align(Alignment.Center),
+                model = uiState.contentLoadingUiState.error
+            ) {
+  
