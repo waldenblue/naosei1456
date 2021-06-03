@@ -114,4 +114,9 @@ private fun CoinDetail(
 
 @ExperimentalMaterialApi
 @Composable
-priva
+private fun FloatingBackIcon(
+    onBackClicked: Block
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth(
