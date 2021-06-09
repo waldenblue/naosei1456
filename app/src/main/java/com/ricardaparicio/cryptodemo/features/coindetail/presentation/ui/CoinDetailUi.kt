@@ -130,4 +130,6 @@ private fun FloatingBackIcon(
             color = Color.Transparent
         ) {
             Image(
-                modifie
+                modifier = Modifier.padding(10.dp),
+                painter = painterResource(R.drawable.ic_back),
+                contentDescription =
