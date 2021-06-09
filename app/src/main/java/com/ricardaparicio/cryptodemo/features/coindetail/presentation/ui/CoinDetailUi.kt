@@ -126,4 +126,8 @@ private fun FloatingBackIcon(
     ) {
         Surface(
             modifier = Modifier.clip(CircleShape),
-            onClick =
+            onClick = onBackClicked,
+            color = Color.Transparent
+        ) {
+            Image(
+                modifie
