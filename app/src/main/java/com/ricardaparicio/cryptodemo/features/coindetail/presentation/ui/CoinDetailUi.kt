@@ -119,4 +119,7 @@ private fun FloatingBackIcon(
 ) {
     Row(
         modifier = Modifier
-            .fillMaxWidth(
+            .fillMaxWidth()
+            .padding(start = 5.dp)
+            .height(dimensionResource(R.dimen.app_bar_height)),
+        verticalAlig
