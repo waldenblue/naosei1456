@@ -122,4 +122,8 @@ private fun FloatingBackIcon(
             .fillMaxWidth()
             .padding(start = 5.dp)
             .height(dimensionResource(R.dimen.app_bar_height)),
-        verticalAlig
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Surface(
+            modifier = Modifier.clip(CircleShape),
+            onClick =
