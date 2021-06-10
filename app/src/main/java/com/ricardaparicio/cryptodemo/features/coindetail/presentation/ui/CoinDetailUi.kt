@@ -142,4 +142,8 @@ private fun FloatingBackIcon(
 private fun CoinInfo(
     uiState: CoinDetailUiState,
 ) {
-    Column
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 20.dp, vertical = 15.dp)
+ 
