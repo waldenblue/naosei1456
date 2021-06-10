@@ -146,4 +146,7 @@ private fun CoinInfo(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 20.dp, vertical = 15.dp)
- 
+    ) {
+        CoinInfoItem(
+            title = stringResource(R.string.coin_market_cap_position),
+            text = uiState.co
