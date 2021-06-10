@@ -132,4 +132,14 @@ private fun FloatingBackIcon(
             Image(
                 modifier = Modifier.padding(10.dp),
                 painter = painterResource(R.drawable.ic_back),
-                contentDescription =
+                contentDescription = null,
+            )
+        }
+    }
+}
+
+@Composable
+private fun CoinInfo(
+    uiState: CoinDetailUiState,
+) {
+    Column
