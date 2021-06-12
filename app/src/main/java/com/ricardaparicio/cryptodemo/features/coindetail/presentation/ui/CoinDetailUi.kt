@@ -149,4 +149,8 @@ private fun CoinInfo(
     ) {
         CoinInfoItem(
             title = stringResource(R.string.coin_market_cap_position),
-            text = uiState.co
+            text = uiState.coinSummary.marketCapPosition
+        )
+        Spacer(modifier = Modifier.height(15.dp))
+        CoinInfoItem(
+ 
