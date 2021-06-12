@@ -153,4 +153,7 @@ private fun CoinInfo(
         )
         Spacer(modifier = Modifier.height(15.dp))
         CoinInfoItem(
- 
+            title = stringResource(R.string.coin_current_price),
+            text = uiState.coinSummary.price
+        )
+        Space
