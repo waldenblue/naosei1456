@@ -159,4 +159,8 @@ private fun CoinInfo(
         Spacer(modifier = Modifier.height(15.dp))
         CoinInfoItem(
             title = stringResource(R.string.coin_ath),
-          
+            text = uiState.ath
+        )
+        Spacer(modifier = Modifier.height(15.dp))
+        CoinInfoItem(
+      
