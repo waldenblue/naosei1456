@@ -171,4 +171,7 @@ private fun CoinInfo(
             title = stringResource(R.string.coin_price_percentage_change_24h),
             text = uiState.priceChangePercentage24h
         )
-        Spacer(mod
+        Spacer(modifier = Modifier.height(15.dp))
+        CoinInfoItem(
+            title = stringResource(R.string.coin_description),
+       
