@@ -184,4 +184,9 @@ private fun CoinInfoItem(title: String, text: String) {
     Column(modifier = Modifier.fillMaxWidth()) {
         Text(
             text = title,
-            style = MaterialTheme.typography.s
+            style = MaterialTheme.typography.subtitle1
+        )
+        Text(
+            text = text,
+            overflow = TextOverflow.Ellipsis,
+     
