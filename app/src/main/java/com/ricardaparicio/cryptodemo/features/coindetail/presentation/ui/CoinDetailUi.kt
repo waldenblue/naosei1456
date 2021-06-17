@@ -181,4 +181,7 @@ private fun CoinInfo(
 
 @Composable
 private fun CoinInfoItem(title: String, text: String) {
-  
+    Column(modifier = Modifier.fillMaxWidth()) {
+        Text(
+            text = title,
+            style = MaterialTheme.typography.s
