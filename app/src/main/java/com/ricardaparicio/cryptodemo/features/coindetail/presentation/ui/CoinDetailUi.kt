@@ -174,4 +174,11 @@ private fun CoinInfo(
         Spacer(modifier = Modifier.height(15.dp))
         CoinInfoItem(
             title = stringResource(R.string.coin_description),
-       
+            text = uiState.description
+        )
+    }
+}
+
+@Composable
+private fun CoinInfoItem(title: String, text: String) {
+  
