@@ -189,4 +189,11 @@ private fun CoinInfoItem(title: String, text: String) {
         Text(
             text = text,
             overflow = TextOverflow.Ellipsis,
-     
+            style = MaterialTheme.typography.subtitle2
+        )
+    }
+}
+
+@Composable
+private fun Content(
+    uiState: CoinDetailUiSt
