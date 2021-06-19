@@ -201,4 +201,8 @@ private fun Content(
 ) {
     Surface {
         LazyColumn(
-            modifier = Modifie
+            modifier = Modifier.fillMaxSize(),
+            state = lazyListState,
+        ) {
+            item {
+                CoinImage(la
