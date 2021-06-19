@@ -196,4 +196,9 @@ private fun CoinInfoItem(title: String, text: String) {
 
 @Composable
 private fun Content(
-    uiState: CoinDetailUiSt
+    uiState: CoinDetailUiState,
+    lazyListState: LazyListState,
+) {
+    Surface {
+        LazyColumn(
+            modifier = Modifie
