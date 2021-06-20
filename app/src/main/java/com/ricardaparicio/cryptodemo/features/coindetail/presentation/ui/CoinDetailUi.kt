@@ -223,4 +223,10 @@ fun CollapsibleAppBar(
 ) {
     AnimatedVisibility(
         visible = appBarVisibility,
-        enter = slideInVertically
+        enter = slideInVertically(),
+        exit = ExitTransition.None
+    ) {
+        TopAppBar(
+            title = {
+                AnimatedVisibility(
+    
