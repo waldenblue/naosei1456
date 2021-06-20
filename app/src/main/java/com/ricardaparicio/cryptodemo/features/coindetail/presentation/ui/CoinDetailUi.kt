@@ -211,4 +211,12 @@ private fun Content(
                 CoinInfo(uiState)
             }
         }
-    
+    }
+}
+
+@Composable
+fun CollapsibleAppBar(
+    title: String,
+    appBarVisibility: Boolean,
+    titleVisibility: Boolean,
+    o
