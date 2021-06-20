@@ -205,4 +205,10 @@ private fun Content(
             state = lazyListState,
         ) {
             item {
-                CoinImage(la
+                CoinImage(lazyListState, uiState.coinSummary.image)
+            }
+            item {
+                CoinInfo(uiState)
+            }
+        }
+    
