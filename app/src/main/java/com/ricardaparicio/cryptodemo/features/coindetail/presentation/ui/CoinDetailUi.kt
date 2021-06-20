@@ -219,4 +219,8 @@ fun CollapsibleAppBar(
     title: String,
     appBarVisibility: Boolean,
     titleVisibility: Boolean,
-    o
+    onClickBack: Block
+) {
+    AnimatedVisibility(
+        visible = appBarVisibility,
+        enter = slideInVertically
