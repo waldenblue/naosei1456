@@ -231,4 +231,8 @@ fun CollapsibleAppBar(
                 AnimatedVisibility(
                     visible = titleVisibility,
                     enter = slideInVertically(),
-                    exit = slideOut
+                    exit = slideOutVertically()
+                ) {
+                    Text(
+                        text = title,
+                        style = M
