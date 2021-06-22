@@ -242,4 +242,7 @@ fun CollapsibleAppBar(
                     )
                 }
             },
-       
+            navigationIcon = {
+                IconButton(onClick = onClickBack) {
+                    Icon(
+                     
