@@ -238,3 +238,8 @@ fun CollapsibleAppBar(
                         style = MaterialTheme.typography.subtitle1,
                         color = MaterialTheme.colors.onPrimary,
                         maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
+            },
+       
