@@ -235,4 +235,6 @@ fun CollapsibleAppBar(
                 ) {
                     Text(
                         text = title,
-                        style = M
+                        style = MaterialTheme.typography.subtitle1,
+                        color = MaterialTheme.colors.onPrimary,
+                        maxLines = 1,
