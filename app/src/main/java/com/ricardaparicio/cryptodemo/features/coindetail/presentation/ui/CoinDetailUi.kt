@@ -245,4 +245,6 @@ fun CollapsibleAppBar(
             navigationIcon = {
                 IconButton(onClick = onClickBack) {
                     Icon(
-                     
+                        painter = painterResource(id = R.drawable.ic_back),
+                        contentDescription = null,
+             
