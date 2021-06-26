@@ -254,3 +254,12 @@ fun CollapsibleAppBar(
             elevation = 8.dp,
         )
     }
+}
+
+@Composable
+private fun CoinImage(
+    lazyListState: LazyListState,
+    imageUrl: String
+) {
+    val effectDivider = 8f
+    Box
