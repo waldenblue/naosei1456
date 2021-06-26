@@ -247,4 +247,10 @@ fun CollapsibleAppBar(
                     Icon(
                         painter = painterResource(id = R.drawable.ic_back),
                         contentDescription = null,
-             
+                        tint = MaterialTheme.colors.onPrimary,
+                    )
+                }
+            },
+            elevation = 8.dp,
+        )
+    }
