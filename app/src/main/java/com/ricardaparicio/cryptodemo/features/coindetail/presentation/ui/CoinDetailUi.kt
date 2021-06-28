@@ -268,4 +268,7 @@ private fun CoinImage(
             .height(190.dp)
             .background(Boulder)
             .alpha(
-                when (lazyListState.firstVisibleItemInde
+                when (lazyListState.firstVisibleItemIndex) {
+                    0 -> 1 - (lazyListState.firstVisibleItemScrollOffset / (effectDivider * 100))
+                    else -> 0f
+    
