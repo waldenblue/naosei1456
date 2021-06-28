@@ -266,4 +266,6 @@ private fun CoinImage(
         modifier = Modifier
             .fillMaxWidth()
             .height(190.dp)
-          
+            .background(Boulder)
+            .alpha(
+                when (lazyListState.firstVisibleItemInde
