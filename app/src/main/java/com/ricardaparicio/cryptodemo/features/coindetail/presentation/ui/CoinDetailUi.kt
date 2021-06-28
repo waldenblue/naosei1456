@@ -262,4 +262,8 @@ private fun CoinImage(
     imageUrl: String
 ) {
     val effectDivider = 8f
-    Box
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(190.dp)
+          
