@@ -271,4 +271,8 @@ private fun CoinImage(
                 when (lazyListState.firstVisibleItemIndex) {
                     0 -> 1 - (lazyListState.firstVisibleItemScrollOffset / (effectDivider * 100))
                     else -> 0f
-    
+                }
+            )
+            .offset(
+                y = when (lazyListState.firstVisibleItemIndex) {
+                    0
