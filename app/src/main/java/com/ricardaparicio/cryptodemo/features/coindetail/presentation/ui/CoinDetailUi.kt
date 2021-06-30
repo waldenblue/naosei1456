@@ -278,3 +278,8 @@ private fun CoinImage(
                     0 -> (lazyListState.firstVisibleItemScrollOffset / effectDivider)
                     else -> 0f
                 }.dp
+            ),
+        contentAlignment = Alignment.Center,
+    ) {
+        Image(
+            modifier = Modifier.size
