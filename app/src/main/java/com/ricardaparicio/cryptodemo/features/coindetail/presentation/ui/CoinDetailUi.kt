@@ -282,4 +282,8 @@ private fun CoinImage(
         contentAlignment = Alignment.Center,
     ) {
         Image(
-            modifier = Modifier.size
+            modifier = Modifier.size(140.dp),
+            painter = rememberImagePainter(
+                data = imageUrl,
+                builder = {
+     
