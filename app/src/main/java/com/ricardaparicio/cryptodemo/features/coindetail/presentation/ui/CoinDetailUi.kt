@@ -286,4 +286,8 @@ private fun CoinImage(
             painter = rememberImagePainter(
                 data = imageUrl,
                 builder = {
-     
+                    crossfade(true)
+                }
+            ),
+            contentDescription = null,
+            conten
