@@ -290,4 +290,7 @@ private fun CoinImage(
                 }
             ),
             contentDescription = null,
-            conten
+            contentScale = ContentScale.Crop,
+        )
+    }
+}
