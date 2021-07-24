@@ -20,4 +20,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
-import androidx.li
+import androidx.lifecycle.viewModelScope
+import com.ricardaparicio.cryptodemo.core.Reducer
+import com.ricardaparicio.cryptodemo.c
