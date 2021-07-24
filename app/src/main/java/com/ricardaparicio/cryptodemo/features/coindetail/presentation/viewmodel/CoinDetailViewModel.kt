@@ -13,4 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ricardaparicio.cryptodemo.features.coindetail.presentatio
+package com.ricardaparicio.cryptodemo.features.coindetail.presentation.viewmodel
+
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.ru
