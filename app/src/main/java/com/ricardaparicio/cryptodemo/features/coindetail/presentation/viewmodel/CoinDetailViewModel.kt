@@ -22,4 +22,6 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ricardaparicio.cryptodemo.core.Reducer
-import com.ricardaparicio.cryptodemo.c
+import com.ricardaparicio.cryptodemo.core.navigation.NavArg
+import com.ricardaparicio.cryptodemo.features.common.ui.viewmodel.ContentLoadingUiAction
+import com.ricard
