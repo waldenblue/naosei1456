@@ -24,4 +24,5 @@ import androidx.lifecycle.viewModelScope
 import com.ricardaparicio.cryptodemo.core.Reducer
 import com.ricardaparicio.cryptodemo.core.navigation.NavArg
 import com.ricardaparicio.cryptodemo.features.common.ui.viewmodel.ContentLoadingUiAction
-import com.ricard
+import com.ricardaparicio.cryptodemo.features.coindetail.domain.GetCoinUseCase
+import com.ricardaparicio.cryptodemo.features.coindetail.presentation.ui.C
