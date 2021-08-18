@@ -29,3 +29,9 @@ import com.ricardaparicio.cryptodemo.features.coindetail.presentation.ui.CoinDet
 import com.ricardaparicio.cryptodemo.features.coindetail.presentation.reducer.CoinDetailUiAction
 import com.ricardaparicio.cryptodemo.features.coindetail.presentation.reducer.CoinDetailUiAction.NewCoin
 import com.ricardaparicio.cryptodemo.features.coindetail.presentation.reducer.CoinDetailUiAction.UpdateContentLoading
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+@HiltViewModel
+class Co
