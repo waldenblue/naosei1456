@@ -39,3 +39,8 @@ class CoinDetailViewModel @Inject constructor(
     private val reducer: Reducer<CoinDetailUiState, CoinDetailUiAction>,
     private val savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
+
+    var uiState by mutableStateOf(CoinDetailUiState())
+        private set
+
+    private val coin
