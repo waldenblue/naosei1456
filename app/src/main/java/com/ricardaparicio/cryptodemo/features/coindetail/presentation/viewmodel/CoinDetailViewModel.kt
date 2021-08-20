@@ -36,4 +36,6 @@ import javax.inject.Inject
 @HiltViewModel
 class CoinDetailViewModel @Inject constructor(
     private val getCoinUseCase: GetCoinUseCase,
-    private val
+    private val reducer: Reducer<CoinDetailUiState, CoinDetailUiAction>,
+    private val savedStateHandle: SavedStateHandle,
+) : ViewModel() {
