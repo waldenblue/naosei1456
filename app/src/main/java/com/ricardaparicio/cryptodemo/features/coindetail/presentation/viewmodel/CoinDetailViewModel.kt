@@ -34,4 +34,6 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class Co
+class CoinDetailViewModel @Inject constructor(
+    private val getCoinUseCase: GetCoinUseCase,
+    private val
