@@ -43,4 +43,9 @@ class CoinDetailViewModel @Inject constructor(
     var uiState by mutableStateOf(CoinDetailUiState())
         private set
 
-    private val coin
+    private val coinId: String
+        get() = requireNotNull(
+            savedStateHandle.get<String>(NavArg.CoinId.key)
+        )
+
+    init
