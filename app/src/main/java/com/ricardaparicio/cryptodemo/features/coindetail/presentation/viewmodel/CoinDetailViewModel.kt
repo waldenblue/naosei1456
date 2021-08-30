@@ -48,4 +48,10 @@ class CoinDetailViewModel @Inject constructor(
             savedStateHandle.get<String>(NavArg.CoinId.key)
         )
 
-    init
+    init {
+        fetchCoin()
+    }
+
+    private fun fetchCoin() =
+        viewModelScope.launch {
+            reduce(UpdateCo
