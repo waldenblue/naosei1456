@@ -58,4 +58,7 @@ class CoinDetailViewModel @Inject constructor(
             getCoinUseCase(GetCoinUseCase.Params(coinId))
                 .fold(
                     { failure ->
-                        reduce(UpdateContentLoading(ContentLoad
+                        reduce(UpdateContentLoading(ContentLoadingUiAction.Error(failure)))
+                    },
+                    { result ->
+                        reduce(NewCoin(resul
