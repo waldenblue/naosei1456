@@ -54,4 +54,6 @@ class CoinDetailViewModel @Inject constructor(
 
     private fun fetchCoin() =
         viewModelScope.launch {
-            reduce(UpdateCo
+            reduce(UpdateContentLoading(ContentLoadingUiAction.Loading))
+            getCoinUseCase(GetCoinUseCase.Params(coinId))
+            
