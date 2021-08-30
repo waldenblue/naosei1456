@@ -56,4 +56,6 @@ class CoinDetailViewModel @Inject constructor(
         viewModelScope.launch {
             reduce(UpdateContentLoading(ContentLoadingUiAction.Loading))
             getCoinUseCase(GetCoinUseCase.Params(coinId))
-            
+                .fold(
+                    { failure ->
+                        reduce(UpdateContentLoading(ContentLoad
