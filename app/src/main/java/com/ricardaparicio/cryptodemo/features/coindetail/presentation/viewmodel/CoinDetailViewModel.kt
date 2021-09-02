@@ -64,4 +64,8 @@ class CoinDetailViewModel @Inject constructor(
                         reduce(NewCoin(result.coin))
                         reduce(UpdateContentLoading(ContentLoadingUiAction.Success))
                     }
-        
+                )
+        }
+
+    private fun reduce(action: CoinDetailUiAction) {
+        uiState = reducer.reduce(uiState, acti
