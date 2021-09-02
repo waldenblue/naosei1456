@@ -68,4 +68,9 @@ class CoinDetailViewModel @Inject constructor(
         }
 
     private fun reduce(action: CoinDetailUiAction) {
-        uiState = reducer.reduce(uiState, acti
+        uiState = reducer.reduce(uiState, action)
+    }
+
+    fun onDismissDialogRequested() {
+        reduce(UpdateContentLoading(ContentLoadingUiAction.CloseError))
+   
