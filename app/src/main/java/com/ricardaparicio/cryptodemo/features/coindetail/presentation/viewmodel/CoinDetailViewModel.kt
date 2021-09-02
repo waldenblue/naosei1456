@@ -61,4 +61,7 @@ class CoinDetailViewModel @Inject constructor(
                         reduce(UpdateContentLoading(ContentLoadingUiAction.Error(failure)))
                     },
                     { result ->
-                        reduce(NewCoin(resul
+                        reduce(NewCoin(result.coin))
+                        reduce(UpdateContentLoading(ContentLoadingUiAction.Success))
+                    }
+        
