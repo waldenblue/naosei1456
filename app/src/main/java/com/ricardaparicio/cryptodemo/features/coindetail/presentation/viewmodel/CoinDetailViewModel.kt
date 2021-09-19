@@ -73,4 +73,6 @@ class CoinDetailViewModel @Inject constructor(
 
     fun onDismissDialogRequested() {
         reduce(UpdateContentLoading(ContentLoadingUiAction.CloseError))
-   
+    }
+
+}
