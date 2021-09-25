@@ -19,4 +19,6 @@ import arrow.core.Either
 import com.ricardaparicio.cryptodemo.core.CoroutineDispatchers
 import com.ricardaparicio.cryptodemo.core.Failure
 import com.ricardaparicio.cryptodemo.core.usecase.FlowUseCase
-import com.ricardaparicio.cr
+import com.ricardaparicio.cryptodemo.core.usecase.NoParam
+import com.ricardaparicio.cryptodemo.core.usecase.UseCaseResult
+import com.ricardaparicio.cryptode
