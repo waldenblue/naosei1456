@@ -15,4 +15,6 @@
  */
 package com.ricardaparicio.cryptodemo.features.coinlist.domain
 
-import arr
+import arrow.core.Either
+import com.ricardaparicio.cryptodemo.core.CoroutineDispatchers
+import com.ricardaparicio.c
