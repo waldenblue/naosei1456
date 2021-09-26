@@ -22,4 +22,6 @@ import com.ricardaparicio.cryptodemo.core.usecase.FlowUseCase
 import com.ricardaparicio.cryptodemo.core.usecase.NoParam
 import com.ricardaparicio.cryptodemo.core.usecase.UseCaseResult
 import com.ricardaparicio.cryptodemo.features.common.data.repository.CoinRepository
-import com.ricardaparicio.cryptodemo.features.common.domain.model
+import com.ricardaparicio.cryptodemo.features.common.domain.model.CoinListState
+import com.ricardaparicio.cryptodemo.features.coinlist.domain.GetCoinListUseCase.Result
+import 
