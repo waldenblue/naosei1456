@@ -28,4 +28,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
-class GetCoinListUseCase @Injec
+class GetCoinListUseCase @Inject constructor(
+    private val coinRepository: CoinRepository,
+    dispatchers: CoroutineDispatchers,
+) : FlowUseCase<N
