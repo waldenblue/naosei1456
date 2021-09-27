@@ -24,4 +24,8 @@ import com.ricardaparicio.cryptodemo.core.usecase.UseCaseResult
 import com.ricardaparicio.cryptodemo.features.common.data.repository.CoinRepository
 import com.ricardaparicio.cryptodemo.features.common.domain.model.CoinListState
 import com.ricardaparicio.cryptodemo.features.coinlist.domain.GetCoinListUseCase.Result
-import 
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
+import javax.inject.Inject
+
+class GetCoinListUseCase @Injec
