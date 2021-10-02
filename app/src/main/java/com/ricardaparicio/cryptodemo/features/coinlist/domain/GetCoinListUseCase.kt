@@ -31,4 +31,8 @@ import javax.inject.Inject
 class GetCoinListUseCase @Inject constructor(
     private val coinRepository: CoinRepository,
     dispatchers: CoroutineDispatchers,
-) : FlowUseCase<N
+) : FlowUseCase<NoParam, Result>(dispatchers) {
+
+    data class Result(val coinState: CoinListState) : UseCaseResult
+
+    overrid
