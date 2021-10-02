@@ -36,4 +36,9 @@ class GetCoinListUseCase @Inject constructor(
     data class Result(val coinState: CoinListState) : UseCaseResult
 
     override fun doWork(params: NoParam): Flow<Either<Failure, Result>> =
-        coinRepository.getCoinList().map { coin
+        coinRepository.getCoinList().map { coinsResult ->
+            coinsResult.map { coins ->
+                Result(coins)
+            }
+        }
+}
