@@ -16,4 +16,7 @@
 package com.ricardaparicio.cryptodemo.features.coinlist.domain
 
 import arrow.core.Either
-import com.ricardaparicio.cryptodemo.core.Coroutin
+import com.ricardaparicio.cryptodemo.core.CoroutineDispatchers
+import com.ricardaparicio.cryptodemo.core.Failure
+import com.ricardaparicio.cryptodemo.core.usecase.NoParam
+import com.ric
