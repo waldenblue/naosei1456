@@ -22,4 +22,8 @@ import com.ricardaparicio.cryptodemo.core.usecase.NoParam
 import com.ricardaparicio.cryptodemo.core.usecase.UseCase
 import com.ricardaparicio.cryptodemo.core.usecase.UseCaseResult
 import com.ricardaparicio.cryptodemo.features.common.data.repository.CoinRepository
-import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCur
+import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCurrency
+import javax.inject.Inject
+
+class GetFiatCurrencyUseCase @Inject constructor(
+    private val coinRepository: CoinRep
