@@ -21,4 +21,5 @@ import com.ricardaparicio.cryptodemo.core.Failure
 import com.ricardaparicio.cryptodemo.core.usecase.NoParam
 import com.ricardaparicio.cryptodemo.core.usecase.UseCase
 import com.ricardaparicio.cryptodemo.core.usecase.UseCaseResult
-import com.ricardaparici
+import com.ricardaparicio.cryptodemo.features.common.data.repository.CoinRepository
+import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCur
