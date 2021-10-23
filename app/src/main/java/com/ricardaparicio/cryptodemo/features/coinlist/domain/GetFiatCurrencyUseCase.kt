@@ -26,4 +26,8 @@ import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCurrency
 import javax.inject.Inject
 
 class GetFiatCurrencyUseCase @Inject constructor(
-    private val coinRepository: CoinRep
+    private val coinRepository: CoinRepository,
+    dispatchers: CoroutineDispatchers,
+) : UseCase<NoParam, GetFiatCurrencyUseCase.Result>(dispatchers) {
+
+    data class Result(
