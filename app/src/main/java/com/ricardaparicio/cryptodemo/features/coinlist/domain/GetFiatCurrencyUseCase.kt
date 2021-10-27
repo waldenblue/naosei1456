@@ -30,4 +30,7 @@ class GetFiatCurrencyUseCase @Inject constructor(
     dispatchers: CoroutineDispatchers,
 ) : UseCase<NoParam, GetFiatCurrencyUseCase.Result>(dispatchers) {
 
-    data class Result(
+    data class Result(val currency: FiatCurrency) : UseCaseResult
+
+    override suspend fun doWork(params: NoParam): Either<Failure, Result> =
+        coinRe
