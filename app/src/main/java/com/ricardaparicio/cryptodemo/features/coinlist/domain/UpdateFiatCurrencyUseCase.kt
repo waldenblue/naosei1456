@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2022 Ricard Aparicio
 
@@ -18,20 +19,24 @@ package com.ricardaparicio.cryptodemo.features.coinlist.domain
 import arrow.core.Either
 import com.ricardaparicio.cryptodemo.core.CoroutineDispatchers
 import com.ricardaparicio.cryptodemo.core.Failure
-import com.ricardaparicio.cryptodemo.core.usecase.NoParam
 import com.ricardaparicio.cryptodemo.core.usecase.UseCase
+import com.ricardaparicio.cryptodemo.core.usecase.UseCaseParams
 import com.ricardaparicio.cryptodemo.core.usecase.UseCaseResult
+import com.ricardaparicio.cryptodemo.features.coinlist.domain.UpdateFiatCurrencyUseCase.Params
+import com.ricardaparicio.cryptodemo.features.coinlist.domain.UpdateFiatCurrencyUseCase.Result
 import com.ricardaparicio.cryptodemo.features.common.data.repository.CoinRepository
 import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCurrency
+import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
 
-class GetFiatCurrencyUseCase @Inject constructor(
+class UpdateFiatCurrencyUseCase @Inject constructor(
     private val coinRepository: CoinRepository,
     dispatchers: CoroutineDispatchers,
-) : UseCase<NoParam, GetFiatCurrencyUseCase.Result>(dispatchers) {
+) : UseCase<Params, Result>(dispatchers) {
 
+    data class Params(val currency: FiatCurrency) : UseCaseParams
     data class Result(val currency: FiatCurrency) : UseCaseResult
 
-    override suspend fun doWork(params: NoParam): Either<Failure, Result> =
-        coinRepository.getFiatCurrency().map { currency -> Result(currency) }
+    override suspend fun doWork(params: Params): Either<Failure, Result> =
+        coinRepository.updateFiatCurrency(params.currency).map { currency -> Result(currency) }
 }
