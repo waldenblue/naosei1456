@@ -63,3 +63,119 @@ private fun CoinList(
             uiState = uiState,
             onClickCoin = onClickCoin
         )
+
+        if (uiState.contentLoadingUiState.loading) {
+            LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
+        }
+
+        FloatingFiatCurrency(
+            modifier = Modifier
+                .align(Alignment.BottomEnd)
+                .padding(30.dp),
+            onClickCurrency = onClickCurrency,
+            uiState = uiState
+        )
+
+        uiState.contentLoadingUiState.error?.let {
+            AlertError(
+                modifier = Modifier.align(Alignment.Center),
+                model = uiState.contentLoadingUiState.error
+            ) {
+                onClickDismissError()
+            }
+        }
+    }
+}
+
+@Composable
+private fun FloatingFiatCurrency(
+    modifier: Modifier,
+    onClickCurrency: TypedBlock<FiatCurrency>,
+    uiState: CoinListUiState
+) {
+    if (!uiState.contentLoadingUiState.loading) {
+        FloatingActionButton(
+            modifier = modifier,
+            onClick = { onClickCurrency(uiState.fiatCurrency) }
+        ) {
+            Icon(
+                painter = painterResource(
+                    when (uiState.fiatCurrency) {
+                        FiatCurrency.Eur -> R.drawable.ic_euro
+                        FiatCurrency.Usd -> R.drawable.ic_dollar
+                    }
+                ),
+                contentDescription = null
+            )
+        }
+    }
+
+}
+
+@Composable
+private fun CoinLazyColumn(
+    uiState: CoinListUiState,
+    onClickCoin: TypedBlock<CoinSummaryUiModel>
+) {
+    LazyColumn(
+        modifier = Modifier.fillMaxSize().background(MaterialTheme.colors.background),
+        contentPadding = PaddingValues(horizontal = 30.dp, vertical = 30.dp)
+    ) {
+        val size = uiState.coins.size
+        items(size) { index ->
+            val coinItem = uiState.coins[index]
+            CoinItem(coinItem, onClickCoin)
+            if (index < size - 1) {
+                Spacer(Modifier.height(20.dp))
+            }
+        }
+    }
+}
+
+@Composable
+private fun CoinItem(coinItem: CoinSummaryUiModel, onClickCoin: TypedBlock<CoinSummaryUiModel>) {
+    Card(modifier = Modifier
+        .fillMaxWidth()
+        .clickable { onClickCoin(coinItem) }
+    ) {
+        Row(
+            modifier = Modifier.padding(vertical = 15.dp, horizontal = 20.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                modifier = Modifier,
+                textAlign = TextAlign.Center,
+                text = coinItem.marketCapPosition,
+                style = MaterialTheme.typography.caption,
+            )
+            Spacer(Modifier.width(15.dp))
+            Image(
+                modifier = Modifier.size(35.dp),
+                painter = rememberImagePainter(
+                    data = coinItem.image,
+                    builder = {
+                        transformations(CircleCropTransformation())
+                        crossfade(true)
+                    }
+                ),
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+            )
+            Spacer(Modifier.width(15.dp))
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                verticalArrangement = Arrangement.Center,
+            ) {
+                Text(
+                    text = coinItem.symbol,
+                    style = MaterialTheme.typography.subtitle1
+                )
+                Text(
+                    text = coinItem.price,
+                    style = MaterialTheme.typography.h5
+                )
+            }
+
+        }
+    }
+}
