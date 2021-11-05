@@ -15,4 +15,6 @@
  */
 package com.ricardaparicio.cryptodemo.features.coinlist.presentation.ui
 
-import com.ricardaparicio.cryptode
+import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCurrency
+import com.ricardaparicio.cryptodemo.features.common.ui.ContentLoadingUiState
+import c
