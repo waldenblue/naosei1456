@@ -20,4 +20,6 @@ import com.ricardaparicio.cryptodemo.features.common.ui.ContentLoadingUiState
 import com.ricardaparicio.cryptodemo.features.common.ui.model.CoinSummaryUiModel
 
 data class CoinListUiState(
-    val coins: List<CoinSummaryU
+    val coins: List<CoinSummaryUiModel> = emptyList(),
+    val fiatCurrency: FiatCurrency = FiatCurrency.Eur,
+    val contentLoadingUiState: ContentLoadingUiS
