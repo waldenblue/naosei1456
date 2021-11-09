@@ -79,3 +79,45 @@ class CoinListViewModel
                     },
                     { result ->
                         reduce(UpdateFiatCurrency(result.currency))
+                    }
+                )
+        }
+
+    private fun fetchCoins() =
+        getCoinListUseCase(NoParam)
+            .onEach { result -> foldCoinListResult(result) }
+            .launchIn(viewModelScope)
+
+    private fun foldCoinListResult(result: Either<Failure, GetCoinListUseCase.Result>) =
+        result.fold(
+            { failure ->
+                reduce(UpdateContentLoading(ContentLoadingUiAction.Error(failure)))
+            },
+            { useCaseResult ->
+                reduceCoinListResult(useCaseResult)
+            }
+        )
+
+    private fun reduceCoinListResult(useCaseResult: GetCoinListUseCase.Result) =
+        when (val coinState = useCaseResult.coinState) {
+            is CoinListState.Coins -> {
+                reduce(NewCoins(coinState.coins))
+                reduce(UpdateContentLoading(ContentLoadingUiAction.Success))
+            }
+            CoinListState.Loading -> {
+                reduce(UpdateContentLoading(ContentLoadingUiAction.Loading))
+            }
+        }
+
+    private fun reduce(action: CoinListUiAction) {
+        uiState = reducer.reduce(uiState, action)
+    }
+
+    fun onFiatCurrencyClicked(currency: FiatCurrency) {
+        updateFiatCurrency(currency)
+    }
+
+    fun onDismissDialogRequested() {
+        reduce(UpdateContentLoading(ContentLoadingUiAction.CloseError))
+    }
+}
