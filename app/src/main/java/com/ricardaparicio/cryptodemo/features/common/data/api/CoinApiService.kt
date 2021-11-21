@@ -26,4 +26,8 @@ interface CoinApiService {
     @GET("coins/markets")
     fun getCoins(
         @Query("vs_currency") currency: String,
-        @Query("per_page") itemsPerPage: Int =
+        @Query("per_page") itemsPerPage: Int = 20,
+        @Query("sparkline") sparkLine: Boolean = false,
+    ): Call<List<CoinSummaryApiModel>>
+
+   
