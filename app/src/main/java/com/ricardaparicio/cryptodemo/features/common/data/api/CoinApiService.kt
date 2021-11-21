@@ -23,4 +23,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface CoinApiService {
-    @GET("coins/mark
+    @GET("coins/markets")
+    fun getCoins(
+        @Query("vs_currency") currency: String,
+        @Query("per_page") itemsPerPage: Int =
