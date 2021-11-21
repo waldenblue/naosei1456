@@ -15,4 +15,7 @@
  */
 package com.ricardaparicio.cryptodemo.features.common.data.api
 
-import com.ricardaparicio.cryptodemo.features.common.data.api.model.CoinAp
+import com.ricardaparicio.cryptodemo.features.common.data.api.model.CoinApiModel
+import com.ricardaparicio.cryptodemo.features.common.data.api.model.CoinSummaryApiModel
+import retrofit2.Call
+import r
