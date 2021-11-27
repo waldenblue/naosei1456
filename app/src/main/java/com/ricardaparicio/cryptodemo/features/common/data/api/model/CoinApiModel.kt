@@ -10,3 +10,13 @@ data class CoinApiModel(
     val description: CoinDescriptionApiModel,
     val market_cap_rank: Int,
 )
+
+data class CoinDescriptionApiModel(
+    val es: String,
+)
+
+data class CoinLinksApiModel(
+    val homepage: List<String>,
+)
+
+d
