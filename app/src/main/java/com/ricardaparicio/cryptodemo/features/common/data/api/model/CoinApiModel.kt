@@ -5,4 +5,8 @@ data class CoinApiModel(
     val symbol: String,
     val name: String,
     val links: CoinLinksApiModel,
-    val image: CoinIm
+    val image: CoinImagesApiModel,
+    val market_data: CoinMarketDataApiModel,
+    val description: CoinDescriptionApiModel,
+    val market_cap_rank: Int,
+)
