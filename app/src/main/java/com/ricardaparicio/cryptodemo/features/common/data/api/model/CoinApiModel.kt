@@ -19,4 +19,10 @@ data class CoinLinksApiModel(
     val homepage: List<String>,
 )
 
-d
+data class CoinImagesApiModel(
+    val thumb: String,
+    val small: String,
+    val large: String
+)
+
+data class Coin
