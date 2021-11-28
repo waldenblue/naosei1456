@@ -28,4 +28,9 @@ data class CoinImagesApiModel(
 data class CoinMarketDataApiModel(
     val current_price: CoinPriceApiModel,
     val ath: CoinPriceApiModel,
-    val market_cap: CoinPri
+    val market_cap: CoinPriceApiModel,
+    val price_change_24h: Float,
+    val price_change_percentage_24h: Float,
+)
+
+data class CoinPriceApiModel
