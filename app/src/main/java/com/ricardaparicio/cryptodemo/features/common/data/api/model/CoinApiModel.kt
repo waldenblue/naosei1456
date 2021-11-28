@@ -25,4 +25,7 @@ data class CoinImagesApiModel(
     val large: String
 )
 
-data class Coin
+data class CoinMarketDataApiModel(
+    val current_price: CoinPriceApiModel,
+    val ath: CoinPriceApiModel,
+    val market_cap: CoinPri
