@@ -1,3 +1,7 @@
 package com.ricardaparicio.cryptodemo.features.common.data.api.model
 
-data 
+data class CoinSummaryApiModel(
+    val id: String,
+    val symbol: String,
+    val name: String,
+    val image: String
