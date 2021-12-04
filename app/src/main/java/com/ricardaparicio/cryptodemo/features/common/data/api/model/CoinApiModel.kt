@@ -33,4 +33,7 @@ data class CoinMarketDataApiModel(
     val price_change_percentage_24h: Float,
 )
 
-data class CoinPriceApiModel
+data class CoinPriceApiModel(
+    val eur: Float,
+    val usd: Float,
+)
