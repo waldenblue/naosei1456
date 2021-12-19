@@ -13,4 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ricardaparicio.cryptodemo.features.common.data.datasourc
+package com.ricardaparicio.cryptodemo.features.common.data.datasource
+
+import androidx.core.text.HtmlCompat
+import com.ricardaparicio.cryptodemo.features.common.data.api.model.C
