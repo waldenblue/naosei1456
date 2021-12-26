@@ -20,4 +20,7 @@ import com.ricardaparicio.cryptodemo.features.common.data.api.model.CoinApiModel
 import com.ricardaparicio.cryptodemo.features.common.data.api.model.CoinSummaryApiModel
 import com.ricardaparicio.cryptodemo.features.common.domain.model.Coin
 import com.ricardaparicio.cryptodemo.features.common.domain.model.CoinSummary
-import com
+import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCurrency
+import javax.inject.Inject
+
+class CoinApiMapp
