@@ -23,4 +23,6 @@ import com.ricardaparicio.cryptodemo.features.common.domain.model.CoinSummary
 import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCurrency
 import javax.inject.Inject
 
-class CoinApiMapp
+class CoinApiMapper @Inject constructor() {
+
+    fun mapCoinSummary(coinSummaryApiModel: CoinSummaryApiModel, currency: FiatCurr
