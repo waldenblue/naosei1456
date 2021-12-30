@@ -25,4 +25,7 @@ import javax.inject.Inject
 
 class CoinApiMapper @Inject constructor() {
 
-    fun mapCoinSummary(coinSummaryApiModel: CoinSummaryApiModel, currency: FiatCurr
+    fun mapCoinSummary(coinSummaryApiModel: CoinSummaryApiModel, currency: FiatCurrency): CoinSummary =
+        CoinSummary(
+            id = coinSummaryApiModel.id,
+            symbol = coinSummaryApiModel.sym
