@@ -31,4 +31,6 @@ class CoinApiMapper @Inject constructor() {
             symbol = coinSummaryApiModel.symbol,
             name = coinSummaryApiModel.name,
             image = coinSummaryApiModel.image,
-            pri
+            price = coinSummaryApiModel.current_price,
+            marketCapRank = coinSummaryApiModel.market_cap_rank,
+            fiatCurrency = cur
