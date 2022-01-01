@@ -28,4 +28,7 @@ class CoinApiMapper @Inject constructor() {
     fun mapCoinSummary(coinSummaryApiModel: CoinSummaryApiModel, currency: FiatCurrency): CoinSummary =
         CoinSummary(
             id = coinSummaryApiModel.id,
-            symbol = coinSummaryApiModel.sym
+            symbol = coinSummaryApiModel.symbol,
+            name = coinSummaryApiModel.name,
+            image = coinSummaryApiModel.image,
+            pri
