@@ -43,4 +43,6 @@ class CoinApiMapper @Inject constructor() {
                 symbol = coinApiModel.symbol,
                 name = coinApiModel.name,
                 image = coinApiModel.image.large,
-         
+                price = when (currency) {
+                    FiatCurrency.Eur -> coinApiModel.market_data.current_price.eur
+       
