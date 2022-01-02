@@ -33,4 +33,8 @@ class CoinApiMapper @Inject constructor() {
             image = coinSummaryApiModel.image,
             price = coinSummaryApiModel.current_price,
             marketCapRank = coinSummaryApiModel.market_cap_rank,
-            fiatCurrency = cur
+            fiatCurrency = currency,
+        )
+
+    fun mapCoin(coinApiModel: CoinApiModel, currency: FiatCurrency): Coin =
+       
