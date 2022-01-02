@@ -37,4 +37,7 @@ class CoinApiMapper @Inject constructor() {
         )
 
     fun mapCoin(coinApiModel: CoinApiModel, currency: FiatCurrency): Coin =
-       
+        Coin(
+            coinSummary = CoinSummary(
+                id = coinApiModel.id,
+                symbo
