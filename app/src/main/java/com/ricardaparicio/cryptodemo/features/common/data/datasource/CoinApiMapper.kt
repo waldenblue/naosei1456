@@ -40,4 +40,7 @@ class CoinApiMapper @Inject constructor() {
         Coin(
             coinSummary = CoinSummary(
                 id = coinApiModel.id,
-                symbo
+                symbol = coinApiModel.symbol,
+                name = coinApiModel.name,
+                image = coinApiModel.image.large,
+         
