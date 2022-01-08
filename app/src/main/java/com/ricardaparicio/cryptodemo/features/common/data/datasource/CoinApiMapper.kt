@@ -45,4 +45,6 @@ class CoinApiMapper @Inject constructor() {
                 image = coinApiModel.image.large,
                 price = when (currency) {
                     FiatCurrency.Eur -> coinApiModel.market_data.current_price.eur
-       
+                    FiatCurrency.Usd -> coinApiModel.market_data.current_price.usd
+                },
+                marketCapRank = co
