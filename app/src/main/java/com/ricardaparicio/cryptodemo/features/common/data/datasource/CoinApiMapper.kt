@@ -47,4 +47,7 @@ class CoinApiMapper @Inject constructor() {
                     FiatCurrency.Eur -> coinApiModel.market_data.current_price.eur
                     FiatCurrency.Usd -> coinApiModel.market_data.current_price.usd
                 },
-                marketCapRank = co
+                marketCapRank = coinApiModel.market_cap_rank,
+                fiatCurrency = currency
+            ),
+            description = HtmlCompat.fromHtml(
