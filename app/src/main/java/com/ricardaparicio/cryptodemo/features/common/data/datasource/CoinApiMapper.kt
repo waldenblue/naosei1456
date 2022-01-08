@@ -52,4 +52,5 @@ class CoinApiMapper @Inject constructor() {
             ),
             description = HtmlCompat.fromHtml(coinApiModel.description.es, HtmlCompat.FROM_HTML_MODE_LEGACY).toString(),
             ath = when (currency) {
-        
+                FiatCurrency.Eur -> coinApiModel.market_data.ath.eur
+                FiatCurrency.Usd -> coinApiModel.
