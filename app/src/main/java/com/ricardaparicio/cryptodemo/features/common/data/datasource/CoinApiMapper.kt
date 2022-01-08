@@ -50,4 +50,6 @@ class CoinApiMapper @Inject constructor() {
                 marketCapRank = coinApiModel.market_cap_rank,
                 fiatCurrency = currency
             ),
-            description = HtmlCompat.fromHtml(
+            description = HtmlCompat.fromHtml(coinApiModel.description.es, HtmlCompat.FROM_HTML_MODE_LEGACY).toString(),
+            ath = when (currency) {
+        
