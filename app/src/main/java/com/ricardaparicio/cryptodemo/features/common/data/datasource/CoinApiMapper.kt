@@ -60,4 +60,6 @@ class CoinApiMapper @Inject constructor() {
                 FiatCurrency.Usd -> coinApiModel.market_data.market_cap.usd
             },
             priceChange24h = coinApiModel.market_data.price_change_24h,
-            priceChangePerce
+            priceChangePercentage24h = coinApiModel.market_data.price_change_percentage_24h / 100,
+        )
+}
