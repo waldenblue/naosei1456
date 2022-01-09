@@ -56,4 +56,5 @@ class CoinApiMapper @Inject constructor() {
                 FiatCurrency.Usd -> coinApiModel.market_data.ath.usd
             },
             marketCap = when (currency) {
-                FiatCurrency.Eur -> c
+                FiatCurrency.Eur -> coinApiModel.market_data.market_cap.eur
+                FiatCurrency.Usd -> coinApiModel.market_data.market_c
