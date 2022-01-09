@@ -57,4 +57,7 @@ class CoinApiMapper @Inject constructor() {
             },
             marketCap = when (currency) {
                 FiatCurrency.Eur -> coinApiModel.market_data.market_cap.eur
-                FiatCurrency.Usd -> coinApiModel.market_data.market_c
+                FiatCurrency.Usd -> coinApiModel.market_data.market_cap.usd
+            },
+            priceChange24h = coinApiModel.market_data.price_change_24h,
+            priceChangePerce
