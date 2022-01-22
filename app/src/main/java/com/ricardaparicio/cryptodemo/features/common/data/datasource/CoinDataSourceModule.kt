@@ -13,4 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package
+package com.ricardaparicio.cryptodemo.features.common.data.datasource
+
+import dagger.Binds
+import dagger.Module
+import dagger.hilt.InstallIn
+i
