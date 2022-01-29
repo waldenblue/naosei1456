@@ -25,4 +25,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 interface CoinDataSourceModule {
     @Binds
-    fun provideCoinRemoteDataSource(coinRetrofitDataSource: CoinRetrofitDataSou
+    fun provideCoinRemoteDataSource(coinRetrofitDataSource: CoinRetrofitDataSource): CoinRemoteDataSource
+
+    @Binds
+    fun provideCoinLocalDataSource(coinPreferencesDataSource: CoinPreferenc
