@@ -28,4 +28,5 @@ interface CoinDataSourceModule {
     fun provideCoinRemoteDataSource(coinRetrofitDataSource: CoinRetrofitDataSource): CoinRemoteDataSource
 
     @Binds
-    fun provideCoinLocalDataSource(coinPreferencesDataSource: CoinPreferenc
+    fun provideCoinLocalDataSource(coinPreferencesDataSource: CoinPreferencesDataSource): CoinLocalDataSource
+}
