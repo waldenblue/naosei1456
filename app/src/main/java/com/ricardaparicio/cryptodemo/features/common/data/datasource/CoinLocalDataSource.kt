@@ -17,4 +17,7 @@ package com.ricardaparicio.cryptodemo.features.common.data.datasource
 
 import arrow.core.Either
 import com.ricardaparicio.cryptodemo.core.Failure
-import com.rica
+import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCurrency
+import kotlinx.coroutines.flow.Flow
+
+interface CoinLocalD
