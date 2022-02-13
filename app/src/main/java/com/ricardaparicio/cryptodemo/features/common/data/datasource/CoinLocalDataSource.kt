@@ -20,4 +20,6 @@ import com.ricardaparicio.cryptodemo.core.Failure
 import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCurrency
 import kotlinx.coroutines.flow.Flow
 
-interface CoinLocalD
+interface CoinLocalDataSource {
+    fun fiatCurrencyFlow(): Flow<Either<Failure, FiatCurrency>>
+    suspend fun updateFiatCurrency(currency: Fiat
