@@ -22,4 +22,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface CoinLocalDataSource {
     fun fiatCurrencyFlow(): Flow<Either<Failure, FiatCurrency>>
-    suspend fun updateFiatCurrency(currency: Fiat
+    suspend fun updateFiatCurrency(currency: FiatCurrency): Either<Failure, Unit>
+}
