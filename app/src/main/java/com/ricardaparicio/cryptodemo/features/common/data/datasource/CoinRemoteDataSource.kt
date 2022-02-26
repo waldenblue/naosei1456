@@ -18,4 +18,5 @@ package com.ricardaparicio.cryptodemo.features.common.data.datasource
 import arrow.core.Either
 import com.ricardaparicio.cryptodemo.core.Failure
 import com.ricardaparicio.cryptodemo.features.common.domain.model.Coin
-import com.ricardaparicio.cry
+import com.ricardaparicio.cryptodemo.features.common.domain.model.CoinSummary
+import com.ricardaparicio.cryptodemo.features.common.domain.model.
