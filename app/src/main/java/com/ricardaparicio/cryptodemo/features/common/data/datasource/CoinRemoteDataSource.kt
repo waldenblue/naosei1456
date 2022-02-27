@@ -22,4 +22,6 @@ import com.ricardaparicio.cryptodemo.features.common.domain.model.CoinSummary
 import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCurrency
 
 interface CoinRemoteDataSource {
-    suspend fun getCoinList(currency: FiatCurrency): Either<Failur
+    suspend fun getCoinList(currency: FiatCurrency): Either<Failure, List<CoinSummary>>
+    suspend fun getCoin(coinId: String, currency: FiatCurrency): Either<Failure, Coin>
+}
