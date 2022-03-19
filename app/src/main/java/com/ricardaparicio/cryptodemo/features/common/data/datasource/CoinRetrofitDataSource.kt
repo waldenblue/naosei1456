@@ -18,4 +18,7 @@ package com.ricardaparicio.cryptodemo.features.common.data.datasource
 import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
-import com.ricardaparicio.cryp
+import com.ricardaparicio.cryptodemo.core.Failure
+import com.ricardaparicio.cryptodemo.core.NetworkingError
+import com.ricardaparicio.cryptodemo.core.ServerError
+import
