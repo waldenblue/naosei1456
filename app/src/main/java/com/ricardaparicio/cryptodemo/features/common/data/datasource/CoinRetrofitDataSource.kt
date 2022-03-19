@@ -27,4 +27,9 @@ import com.ricardaparicio.cryptodemo.features.common.domain.model.CoinSummary
 import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCurrency
 import retrofit2.Call
 import timber.log.Timber
-import java.lang.I
+import java.lang.IllegalArgumentException
+import javax.inject.Inject
+
+class CoinRetrofitDataSource
+@Inject constructor(
+    private v
