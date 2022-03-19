@@ -21,4 +21,5 @@ import arrow.core.right
 import com.ricardaparicio.cryptodemo.core.Failure
 import com.ricardaparicio.cryptodemo.core.NetworkingError
 import com.ricardaparicio.cryptodemo.core.ServerError
-import
+import com.ricardaparicio.cryptodemo.features.common.data.api.CoinApiService
+import com.ricardaparicio.cryptodemo.features.common.do
