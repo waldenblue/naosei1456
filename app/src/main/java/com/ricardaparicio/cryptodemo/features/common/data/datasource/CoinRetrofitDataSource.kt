@@ -32,4 +32,8 @@ import javax.inject.Inject
 
 class CoinRetrofitDataSource
 @Inject constructor(
-    private v
+    private val coinService: CoinApiService,
+    private val coinMapper: CoinApiMapper,
+) : CoinRemoteDataSource {
+
+    override suspend fun getCoin(coinId: String, cur
