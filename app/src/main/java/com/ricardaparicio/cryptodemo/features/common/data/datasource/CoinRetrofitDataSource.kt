@@ -41,4 +41,7 @@ class CoinRetrofitDataSource
             call = coinService.getCoin(coinId),
             mapping = { coinApiModel ->
                 coinMapper.mapCoin(coinApiModel, currency)
-       
+            }
+        )
+
+    override suspend fun getCoinList(currency: FiatCurrency): Either<Failure, List<C
