@@ -44,4 +44,8 @@ class CoinRetrofitDataSource
             }
         )
 
-    override suspend fun getCoinList(currency: FiatCurrency): Either<Failure, List<C
+    override suspend fun getCoinList(currency: FiatCurrency): Either<Failure, List<CoinSummary>> =
+        request(
+            call = coinService.getCoins(
+                currency = when (currency) {
+    
