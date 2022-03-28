@@ -50,4 +50,7 @@ class CoinRetrofitDataSource
                 currency = when (currency) {
                     FiatCurrency.Eur -> EUR_SYMBOL
                     FiatCurrency.Usd -> USD_SYMBOL
-            
+                }
+            ),
+            mapping = { coinsSummaryApiModel ->
+                coinsSummaryApiModel.map { coinSumm
