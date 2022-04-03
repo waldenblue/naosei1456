@@ -53,4 +53,6 @@ class CoinRetrofitDataSource
                 }
             ),
             mapping = { coinsSummaryApiModel ->
-                coinsSummaryApiModel.map { coinSumm
+                coinsSummaryApiModel.map { coinSummaryApiModel ->
+                    coinMapper.mapCoinSummary(coinSummaryApiModel, currency)
+                }
