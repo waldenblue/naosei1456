@@ -56,3 +56,10 @@ class CoinRetrofitDataSource
                 coinsSummaryApiModel.map { coinSummaryApiModel ->
                     coinMapper.mapCoinSummary(coinSummaryApiModel, currency)
                 }
+            }
+        )
+
+    private fun <T, R> request(
+        call: Call<T>,
+        mapping: (T) -> R,
+    ):
