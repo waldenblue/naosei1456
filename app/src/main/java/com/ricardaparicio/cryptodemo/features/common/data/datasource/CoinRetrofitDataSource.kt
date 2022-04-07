@@ -62,4 +62,6 @@ class CoinRetrofitDataSource
     private fun <T, R> request(
         call: Call<T>,
         mapping: (T) -> R,
-    ):
+    ): Either<Failure, R> =
+        kotlin.runCatching {
+            val response = call.execute()
