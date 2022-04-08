@@ -65,3 +65,6 @@ class CoinRetrofitDataSource
     ): Either<Failure, R> =
         kotlin.runCatching {
             val response = call.execute()
+            when (response.isSuccessful) {
+                true -> mapping(requireNotNull(response.body())).right()
+               
