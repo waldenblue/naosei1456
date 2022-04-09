@@ -71,4 +71,9 @@ class CoinRetrofitDataSource
             }
         }.onFailure { throwable ->
             Timber.e(throwable)
-     
+        }.getOrElse {
+            NetworkingError.left()
+        }
+
+    companion object {
+        private const val EUR_SYMBOL =
