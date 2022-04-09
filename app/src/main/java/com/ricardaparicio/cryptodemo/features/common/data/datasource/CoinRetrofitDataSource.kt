@@ -76,4 +76,7 @@ class CoinRetrofitDataSource
         }
 
     companion object {
-        private const val EUR_SYMBOL =
+        private const val EUR_SYMBOL = "eur"
+        private const val USD_SYMBOL = "usd"
+    }
+}
