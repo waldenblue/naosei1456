@@ -67,4 +67,8 @@ class CoinRetrofitDataSource
             val response = call.execute()
             when (response.isSuccessful) {
                 true -> mapping(requireNotNull(response.body())).right()
-               
+                false -> ServerError.left()
+            }
+        }.onFailure { throwable ->
+            Timber.e(throwable)
+     
