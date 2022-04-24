@@ -15,4 +15,8 @@
  */
 package com.ricardaparicio.cryptodemo.features.common.data.repository
 
+import arrow.core.Either
+import arrow.core.flatMap
+import arrow.core.right
+import com.ricardaparicio.cryptodemo.core.Failure
 impor
