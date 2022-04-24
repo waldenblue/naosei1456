@@ -21,4 +21,6 @@ import arrow.core.right
 import com.ricardaparicio.cryptodemo.core.Failure
 import com.ricardaparicio.cryptodemo.features.common.data.datasource.CoinLocalDataSource
 import com.ricardaparicio.cryptodemo.features.common.data.datasource.CoinRemoteDataSource
-import com.ricardaparicio.cryptodemo.features.common.do
+import com.ricardaparicio.cryptodemo.features.common.domain.model.Coin
+import com.ricardaparicio.cryptodemo.features.common.domain.model.CoinListState
+import com.ricardaparicio.cry
