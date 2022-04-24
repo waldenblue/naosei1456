@@ -20,4 +20,5 @@ import arrow.core.flatMap
 import arrow.core.right
 import com.ricardaparicio.cryptodemo.core.Failure
 import com.ricardaparicio.cryptodemo.features.common.data.datasource.CoinLocalDataSource
-import com.ricardaparicio.cryptodemo.
+import com.ricardaparicio.cryptodemo.features.common.data.datasource.CoinRemoteDataSource
+import com.ricardaparicio.cryptodemo.features.common.do
