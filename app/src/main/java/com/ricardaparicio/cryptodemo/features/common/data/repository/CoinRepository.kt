@@ -23,4 +23,7 @@ import com.ricardaparicio.cryptodemo.features.common.data.datasource.CoinLocalDa
 import com.ricardaparicio.cryptodemo.features.common.data.datasource.CoinRemoteDataSource
 import com.ricardaparicio.cryptodemo.features.common.domain.model.Coin
 import com.ricardaparicio.cryptodemo.features.common.domain.model.CoinListState
-import com.ricardaparicio.cry
+import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCurrency
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
+imp
