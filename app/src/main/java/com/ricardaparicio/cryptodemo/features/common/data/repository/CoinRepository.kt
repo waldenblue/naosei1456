@@ -26,4 +26,8 @@ import com.ricardaparicio.cryptodemo.features.common.domain.model.CoinListState
 import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCurrency
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
-imp
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.flow
+import javax.inject.Inject
+
+class CoinReposi
