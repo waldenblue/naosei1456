@@ -30,4 +30,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-class CoinReposi
+class CoinRepository
+@Inject constructor(
+    private val coinRemoteDataSource: CoinRemoteDataSource,
+    private val coinLo
