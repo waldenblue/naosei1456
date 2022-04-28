@@ -37,4 +37,7 @@ class CoinRepository
 ) {
 
     suspend fun getFiatCurrency(): Either<Failure, FiatCurrency> =
-        coinLocalDa
+        coinLocalDataSource.fiatCurrencyFlow().first()
+
+    suspend fun updateFiatCurrency(currency: FiatCurrency): Either<Failure, FiatCurrency> =
+    
