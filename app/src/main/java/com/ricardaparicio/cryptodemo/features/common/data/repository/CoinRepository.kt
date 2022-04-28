@@ -49,4 +49,6 @@ class CoinRepository
             coinRemoteDataSource.getCoin(coinId, currency)
         }
 
-    fun getCoinList(): 
+    fun getCoinList(): Flow<Either<Failure, CoinListState>> =
+        flow {
+            coinLocalDataSource.fiatCurrencyFlow().collect { fiatResul
