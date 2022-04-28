@@ -40,4 +40,6 @@ class CoinRepository
         coinLocalDataSource.fiatCurrencyFlow().first()
 
     suspend fun updateFiatCurrency(currency: FiatCurrency): Either<Failure, FiatCurrency> =
-    
+        coinLocalDataSource.updateFiatCurrency(currency).flatMap {
+            coinLocalDataSource.fiatCurrencyFlow().first()
+  
