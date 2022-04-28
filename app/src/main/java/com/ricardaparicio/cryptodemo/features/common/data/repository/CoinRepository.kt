@@ -51,4 +51,8 @@ class CoinRepository
 
     fun getCoinList(): Flow<Either<Failure, CoinListState>> =
         flow {
-            coinLocalDataSource.fiatCurrencyFlow().collect { fiatResul
+            coinLocalDataSource.fiatCurrencyFlow().collect { fiatResult ->
+                emit((CoinListState.Loading.right()))
+                emit(fiatResult.flatMapToCoins())
+            }
+        }
