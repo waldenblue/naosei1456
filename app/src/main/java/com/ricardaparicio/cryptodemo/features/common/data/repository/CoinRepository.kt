@@ -33,4 +33,8 @@ import javax.inject.Inject
 class CoinRepository
 @Inject constructor(
     private val coinRemoteDataSource: CoinRemoteDataSource,
-    private val coinLo
+    private val coinLocalDataSource: CoinLocalDataSource,
+) {
+
+    suspend fun getFiatCurrency(): Either<Failure, FiatCurrency> =
+        coinLocalDa
