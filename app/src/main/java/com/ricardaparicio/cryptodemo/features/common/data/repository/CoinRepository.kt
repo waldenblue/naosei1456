@@ -45,4 +45,8 @@ class CoinRepository
         }
 
     suspend fun getCoin(coinId: String): Either<Failure, Coin> =
-        coinLocalDataSource.fiatCurrencyFlow(
+        coinLocalDataSource.fiatCurrencyFlow().first().flatMap { currency ->
+            coinRemoteDataSource.getCoin(coinId, currency)
+        }
+
+    fun getCoinList(): 
