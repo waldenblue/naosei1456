@@ -56,3 +56,5 @@ class CoinRepository
                 emit(fiatResult.flatMapToCoins())
             }
         }
+
+    private suspend fun Either<Failure, FiatCurrency>.flatMapToCoins(): Either<Failure, CoinListState.Coin
