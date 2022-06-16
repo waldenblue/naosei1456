@@ -31,3 +31,34 @@ import com.ricardaparicio.cryptodemo.core.util.Block
 import com.ricardaparicio.cryptodemo.features.common.ui.model.AlertErrorUiModel
 
 @Composable
+fun AlertError(modifier: Modifier, model: AlertErrorUiModel, onDismiss: Block) {
+    AlertDialog(
+        modifier = modifier,
+        onDismissRequest = {
+            onDismiss()
+        },
+        title = {
+            Text(stringResource(model.errorTitle))
+        },
+        text = {
+            Text(stringResource(model.errorSubtitle))
+        },
+        buttons = {
+            Row(
+                modifier = Modifier.padding(
+                    horizontal = 20.dp,
+                    vertical = 15.dp,
+                ),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Button(
+                    modifier = Modifier.fillMaxWidth(),
+                    onClick = { onDismiss() }
+                ) {
+                    Text(stringResource(android.R.string.ok))
+                }
+            }
+
+        }
+    )
+}
