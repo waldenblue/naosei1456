@@ -15,4 +15,7 @@
  */
 package com.ricardaparicio.cryptodemo.features.common.ui
 
-import co
+import com.ricardaparicio.cryptodemo.features.common.ui.model.AlertErrorUiModel
+
+data class ContentLoadingUiState(
+    val lo
