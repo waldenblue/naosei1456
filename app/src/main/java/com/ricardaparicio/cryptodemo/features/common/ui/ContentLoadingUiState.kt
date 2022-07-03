@@ -22,4 +22,6 @@ data class ContentLoadingUiState(
     val error: AlertErrorUiModel? = null,
 ) {
     companion object {
-        val empty get()
+        val empty get() = ContentLoadingUiState()
+    }
+}
