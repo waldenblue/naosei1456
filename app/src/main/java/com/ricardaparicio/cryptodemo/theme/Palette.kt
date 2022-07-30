@@ -18,4 +18,8 @@ package com.ricardaparicio.cryptodemo.theme
 import androidx.compose.ui.graphics.Color
 
 val OrangePeel = Color(0xFFE2B529)
-val LaserLemon = Color(0xFFE
+val LaserLemon = Color(0xFFE4BE86)
+val BuddhaGold = Color(0xFF521C00)
+val BurningOrange = Color(0xffff7043)
+val AtomicTangerine = Color(0xffffa270)
+val T
