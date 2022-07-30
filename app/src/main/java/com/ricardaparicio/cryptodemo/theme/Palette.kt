@@ -13,4 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ricarda
+package com.ricardaparicio.cryptodemo.theme
+
+import androidx.compose.ui.graphics.Color
+
+val OrangePeel = Color(0xFFE2B529)
+val LaserLemon = Color(0xFFE
