@@ -2,4 +2,5 @@
     <string name="app_name">cryptodemo</string>
     <string name="alert_error_title">Oops…</string>
     <string name="alert_network_error_subtitle">There was an error trying to list the markets, please check you have network connection and try again.</string>
-    <string name="alert_server_error_subtitle">There was an error rela
+    <string name="alert_server_error_subtitle">There was an error related to the CoinGecko API, please try again later.</string>
+    <string name="alert_internal_error_subtitle">There was an unfortuna
