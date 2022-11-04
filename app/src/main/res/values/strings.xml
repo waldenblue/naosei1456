@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">cryptodemo</string>
-    <string name="alert_error_title">Oo
+    <string name="alert_error_title">Oops…</string>
+    <string name="alert_network_error_subtitle">There was an error trying to list the markets, please check you have netw
