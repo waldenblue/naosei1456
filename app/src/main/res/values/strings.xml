@@ -5,4 +5,7 @@
     <string name="alert_server_error_subtitle">There was an error related to the CoinGecko API, please try again later.</string>
     <string name="alert_internal_error_subtitle">There was an unfortunately internal error…</string>
     <string name="coin_ath">All time high</string>
-    <string name="coin_market_cap_position">Market cap position</strin
+    <string name="coin_market_cap_position">Market cap position</string>
+    <string name="coin_current_price">Current price</string>
+    <string name="coin_market_cap">Market cap</string>
+ 
