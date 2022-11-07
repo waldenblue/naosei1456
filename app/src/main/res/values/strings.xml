@@ -9,4 +9,6 @@
     <string name="coin_current_price">Current price</string>
     <string name="coin_market_cap">Market cap</string>
     <string name="coin_price_change_24h">Price change 24h</string>
-    <string name="coin_price_percentage_change_
+    <string name="coin_price_percentage_change_24h">Price percentage change 24h</string>
+    <string name="coin_description">Description</string>
+</resources>
