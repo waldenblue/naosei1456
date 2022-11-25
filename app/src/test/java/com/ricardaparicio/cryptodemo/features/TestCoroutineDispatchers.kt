@@ -21,4 +21,6 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 
 @ExperimentalCoroutinesApi
-object TestCoroutineDisp
+object TestCoroutineDispatchers : CoroutineDispatchers {
+    override val io: CoroutineDispatcher
+        get() = UnconfinedTestDispatche
