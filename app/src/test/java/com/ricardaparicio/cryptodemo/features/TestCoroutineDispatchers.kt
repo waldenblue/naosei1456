@@ -17,4 +17,8 @@ package com.ricardaparicio.cryptodemo.features
 
 import com.ricardaparicio.cryptodemo.core.CoroutineDispatchers
 import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.ExperimentalCor
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.test.UnconfinedTestDispatcher
+
+@ExperimentalCoroutinesApi
+object TestCoroutineDisp
