@@ -13,4 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ricardaparicio.cryptodemo.feat
+package com.ricardaparicio.cryptodemo.features.coindetail.presentation.reducer
+
+import com.ricardaparicio.cryptodemo.core.util.formatPercentage
+import c
