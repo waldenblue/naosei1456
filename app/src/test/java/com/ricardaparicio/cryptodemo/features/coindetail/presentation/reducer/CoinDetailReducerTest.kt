@@ -16,4 +16,6 @@
 package com.ricardaparicio.cryptodemo.features.coindetail.presentation.reducer
 
 import com.ricardaparicio.cryptodemo.core.util.formatPercentage
-import c
+import com.ricardaparicio.cryptodemo.core.util.formatPrice
+import com.ricardaparicio.cryptodemo.features.FastMock
+import com.ri
