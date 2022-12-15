@@ -20,4 +20,5 @@ import com.ricardaparicio.cryptodemo.core.util.formatPrice
 import com.ricardaparicio.cryptodemo.features.FastMock
 import com.ricardaparicio.cryptodemo.features.coin
 import com.ricardaparicio.cryptodemo.features.coinSummary
-import com.ric
+import com.ricardaparicio.cryptodemo.features.coindetail.presentation.ui.CoinDetailUiState
+import com.ricardaparicio.cryptodemo.
