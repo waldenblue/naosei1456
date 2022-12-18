@@ -21,4 +21,6 @@ import com.ricardaparicio.cryptodemo.features.FastMock
 import com.ricardaparicio.cryptodemo.features.coin
 import com.ricardaparicio.cryptodemo.features.coinSummary
 import com.ricardaparicio.cryptodemo.features.coindetail.presentation.ui.CoinDetailUiState
-import com.ricardaparicio.cryptodemo.
+import com.ricardaparicio.cryptodemo.features.common.ui.ContentLoadingUiState
+import com.ricardaparicio.cryptodemo.features.common.ui.model.CoinSummaryUiModel
+import
