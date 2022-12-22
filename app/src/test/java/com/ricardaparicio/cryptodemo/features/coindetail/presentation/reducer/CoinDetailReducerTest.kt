@@ -27,4 +27,9 @@ import com.ricardaparicio.cryptodemo.features.common.ui.viewmodel.ContentLoading
 import com.ricardaparicio.cryptodemo.features.common.ui.viewmodel.ContentLoadingUiAction
 import io.mockk.MockKAnnotations
 import io.mockk.every
-import 
+import io.mockk.impl.annotations.MockK
+import io.mockk.verify
+import org.junit.Before
+import org.junit.Test
+
+class CoinDetailReducerT
