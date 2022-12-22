@@ -32,4 +32,7 @@ import io.mockk.verify
 import org.junit.Before
 import org.junit.Test
 
-class CoinDetailReducerT
+class CoinDetailReducerTest {
+    @MockK
+    private lateinit var contentLoadingReducer: ContentLoadingReducer
+    private lateinit var reducer: CoinDetailReducer
