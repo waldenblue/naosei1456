@@ -24,4 +24,7 @@ import com.ricardaparicio.cryptodemo.features.coindetail.presentation.ui.CoinDet
 import com.ricardaparicio.cryptodemo.features.common.ui.ContentLoadingUiState
 import com.ricardaparicio.cryptodemo.features.common.ui.model.CoinSummaryUiModel
 import com.ricardaparicio.cryptodemo.features.common.ui.viewmodel.ContentLoadingReducer
-import com.ricardapari
+import com.ricardaparicio.cryptodemo.features.common.ui.viewmodel.ContentLoadingUiAction
+import io.mockk.MockKAnnotations
+import io.mockk.every
+import 
