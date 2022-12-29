@@ -41,4 +41,8 @@ class CoinDetailReducerTest {
     fun onBefore() {
         MockKAnnotations.init(this)
         reducer = CoinDetailReducer(contentLoadingReducer)
- 
+    }
+
+    @Test
+    fun `when NewCoin action is requested then update the state properly`() {
+        FastMock.numb
