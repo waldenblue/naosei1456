@@ -36,3 +36,9 @@ class CoinDetailReducerTest {
     @MockK
     private lateinit var contentLoadingReducer: ContentLoadingReducer
     private lateinit var reducer: CoinDetailReducer
+
+    @Before
+    fun onBefore() {
+        MockKAnnotations.init(this)
+        reducer = CoinDetailReducer(contentLoadingReducer)
+ 
