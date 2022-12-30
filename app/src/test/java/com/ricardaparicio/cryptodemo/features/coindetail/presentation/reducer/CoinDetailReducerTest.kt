@@ -47,4 +47,6 @@ class CoinDetailReducerTest {
     fun `when NewCoin action is requested then update the state properly`() {
         FastMock.numberFormatExt()
         every { coinSummary.price.formatPrice(any()) } returns "€"
-        every { coin.ath.formatPrice(any()) 
+        every { coin.ath.formatPrice(any()) } returns "€"
+        every { coin.marketCap.formatPrice(any()) } returns "€"
+        every { coin.priceChange24
