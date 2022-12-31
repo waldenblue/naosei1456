@@ -51,3 +51,6 @@ class CoinDetailReducerTest {
         every { coin.marketCap.formatPrice(any()) } returns "€"
         every { coin.priceChange24h.formatPrice(any()) } returns "€"
         every { coin.priceChangePercentage24h.formatPercentage() } returns "%"
+
+        val (summary, description, ath, marketCap, priceChange24h, priceChangePercentage24h, contentLoadingUiState) =
+     
