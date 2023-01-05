@@ -53,4 +53,7 @@ class CoinDetailReducerTest {
         every { coin.priceChangePercentage24h.formatPercentage() } returns "%"
 
         val (summary, description, ath, marketCap, priceChange24h, priceChangePercentage24h, contentLoadingUiState) =
-     
+            reducer.reduce(
+                CoinDetailUiState(),
+                CoinDetailUiAction.NewCoin(coin)
+            )
