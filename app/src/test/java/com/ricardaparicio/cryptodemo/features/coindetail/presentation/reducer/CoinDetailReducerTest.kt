@@ -57,3 +57,7 @@ class CoinDetailReducerTest {
                 CoinDetailUiState(),
                 CoinDetailUiAction.NewCoin(coin)
             )
+
+        verify(exactly = 1) {
+            coinSummary.price.formatPrice(coinSummary.fiatCurrency)
+            c
