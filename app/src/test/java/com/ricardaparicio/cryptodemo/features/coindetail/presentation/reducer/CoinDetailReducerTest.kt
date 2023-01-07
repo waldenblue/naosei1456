@@ -60,4 +60,6 @@ class CoinDetailReducerTest {
 
         verify(exactly = 1) {
             coinSummary.price.formatPrice(coinSummary.fiatCurrency)
-            c
+            coin.ath.formatPrice(any())
+            coin.marketCap.formatPrice(any())
+            coin.priceChange24h.formatPrice
