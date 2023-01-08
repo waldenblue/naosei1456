@@ -69,4 +69,9 @@ class CoinDetailReducerTest {
         assert(description == coin.description)
         assert(ath == "€")
         assert(marketCap == "€")
-   
+        assert(priceChange24h == "€")
+        assert(priceChangePercentage24h == "%")
+    }
+
+    @Test
+    
