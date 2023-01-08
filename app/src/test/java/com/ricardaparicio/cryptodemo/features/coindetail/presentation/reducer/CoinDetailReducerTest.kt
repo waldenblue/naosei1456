@@ -65,4 +65,8 @@ class CoinDetailReducerTest {
             coin.priceChange24h.formatPrice(any())
             coin.priceChangePercentage24h.formatPercentage()
         }
-        assert(summary == CoinSummaryUiModel.fr
+        assert(summary == CoinSummaryUiModel.from(coin.coinSummary))
+        assert(description == coin.description)
+        assert(ath == "€")
+        assert(marketCap == "€")
+   
