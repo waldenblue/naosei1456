@@ -75,4 +75,8 @@ class CoinDetailReducerTest {
 
     @Test
     fun `when UpdateContentLoading action is requested then update the state properly`() {
-        every { contentLoadingReduce
+        every { contentLoadingReducer.reduce(any(), any()) } returns ContentLoadingUiState()
+
+        val state = reducer.reduce(
+            CoinDetailUiState(),
+    
