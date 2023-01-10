@@ -79,4 +79,8 @@ class CoinDetailReducerTest {
 
         val state = reducer.reduce(
             CoinDetailUiState(),
-    
+            CoinDetailUiAction.UpdateContentLoading(ContentLoadingUiAction.Loading)
+        )
+
+        verify(exactly = 1) {
+        
