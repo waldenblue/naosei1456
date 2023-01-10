@@ -86,4 +86,7 @@ class CoinDetailReducerTest {
             contentLoadingReducer.reduce(any(), ContentLoadingUiAction.Loading)
         }
 
-        assert(state.contentLoadingUiSta
+        assert(state.contentLoadingUiState == ContentLoadingUiState() )
+
+    }
+}
