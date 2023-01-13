@@ -15,4 +15,8 @@
  */
 package com.ricardaparicio.cryptodemo.features.coinlist.domain
 
-import ar
+import arrow.core.Either
+import arrow.core.left
+import arrow.core.right
+import com.ricardaparicio.cryptodemo.core.NetworkingError
+i
