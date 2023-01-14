@@ -20,4 +20,6 @@ import arrow.core.left
 import arrow.core.right
 import com.ricardaparicio.cryptodemo.core.NetworkingError
 import com.ricardaparicio.cryptodemo.core.usecase.NoParam
-import com.ricardaparicio.cryptodemo.features.TestCorout
+import com.ricardaparicio.cryptodemo.features.TestCoroutineDispatchers
+import com.ricardaparicio.cryptodemo.features.coinsState
+import com.ricardaparicio.cryptodemo.feature
