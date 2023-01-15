@@ -23,4 +23,8 @@ import com.ricardaparicio.cryptodemo.core.usecase.NoParam
 import com.ricardaparicio.cryptodemo.features.TestCoroutineDispatchers
 import com.ricardaparicio.cryptodemo.features.coinsState
 import com.ricardaparicio.cryptodemo.features.common.data.repository.CoinRepository
-import com.ricardaparicio.cryptodemo.features.common.domain.model.CoinListSta
+import com.ricardaparicio.cryptodemo.features.common.domain.model.CoinListState
+import io.mockk.MockKAnnotations
+import io.mockk.coEvery
+import io.mockk.coVerify
+import io.mockk.impl.anno
