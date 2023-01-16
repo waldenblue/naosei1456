@@ -49,4 +49,7 @@ class GetCoinListUseCaseTest {
 
     @Test
     fun `when UseCase is executed then request coin list from repository`() =
-    
+        runTest {
+            coEvery { coinRepository.getCoinList() } returns flowOf(coinsState.right())
+
+            getCo
