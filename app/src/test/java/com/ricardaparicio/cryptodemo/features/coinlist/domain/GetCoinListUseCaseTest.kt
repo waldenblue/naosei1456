@@ -42,4 +42,6 @@ class GetCoinListUseCaseTest {
     private lateinit var getCoinListUseCase: GetCoinListUseCase
 
     @Before
-    fun onBefore()
+    fun onBefore() {
+        MockKAnnotations.init(this)
+        getCoinListUseCase = GetCoinListUseCase(coinRepository, TestC
