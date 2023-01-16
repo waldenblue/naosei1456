@@ -38,4 +38,8 @@ import org.junit.Test
 @ExperimentalCoroutinesApi
 class GetCoinListUseCaseTest {
     @MockK
-    private lateinit var coinReposito
+    private lateinit var coinRepository: CoinRepository
+    private lateinit var getCoinListUseCase: GetCoinListUseCase
+
+    @Before
+    fun onBefore()
