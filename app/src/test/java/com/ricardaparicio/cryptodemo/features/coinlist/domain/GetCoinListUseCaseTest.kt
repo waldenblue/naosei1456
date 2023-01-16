@@ -44,4 +44,9 @@ class GetCoinListUseCaseTest {
     @Before
     fun onBefore() {
         MockKAnnotations.init(this)
-        getCoinListUseCase = GetCoinListUseCase(coinRepository, TestC
+        getCoinListUseCase = GetCoinListUseCase(coinRepository, TestCoroutineDispatchers)
+    }
+
+    @Test
+    fun `when UseCase is executed then request coin list from repository`() =
+    
