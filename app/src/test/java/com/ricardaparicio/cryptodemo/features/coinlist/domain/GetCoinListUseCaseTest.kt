@@ -62,3 +62,8 @@ class GetCoinListUseCaseTest {
         runTest {
             val expectedResult = GetCoinListUseCase.Result(coinsState)
             coEvery { coinRepository.getCoinList() } returns flowOf(coinsState.right())
+
+            val result = getCoinListUseCase(NoParam)
+
+            assert(result.first().isRight())
+            assert
