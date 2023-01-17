@@ -58,4 +58,6 @@ class GetCoinListUseCaseTest {
         }
 
     @Test
-    fun `when Repository 
+    fun `when Repository result is successful then return Either right as UseCase Result`() =
+        runTest {
+            val expectedResult = GetCoinLis
