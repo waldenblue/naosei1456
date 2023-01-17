@@ -60,4 +60,5 @@ class GetCoinListUseCaseTest {
     @Test
     fun `when Repository result is successful then return Either right as UseCase Result`() =
         runTest {
-            val expectedResult = GetCoinLis
+            val expectedResult = GetCoinListUseCase.Result(coinsState)
+            coEvery { coinRepository.getCoinList() } returns flowOf(coinsState.right())
