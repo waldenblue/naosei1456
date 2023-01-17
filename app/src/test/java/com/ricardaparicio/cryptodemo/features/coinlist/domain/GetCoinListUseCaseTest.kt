@@ -52,4 +52,10 @@ class GetCoinListUseCaseTest {
         runTest {
             coEvery { coinRepository.getCoinList() } returns flowOf(coinsState.right())
 
-            getCo
+            getCoinListUseCase(NoParam)
+
+            coVerify(exactly = 1) { coinRepository.getCoinList() }
+        }
+
+    @Test
+    fun `when Repository 
