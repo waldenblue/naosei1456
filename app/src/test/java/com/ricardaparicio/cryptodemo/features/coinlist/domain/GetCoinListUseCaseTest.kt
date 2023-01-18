@@ -73,4 +73,6 @@ class GetCoinListUseCaseTest {
     fun `when Repository result is failed then return Either left as Failure`() =
         runTest {
             val expectedResult = NetworkingError
-            coEvery { coi
+            coEvery { coinRepository.getCoinList() } returns flowOf(expectedResult.left())
+
+            val result = getCoinListUseCase(NoParam)
