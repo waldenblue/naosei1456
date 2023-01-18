@@ -66,4 +66,8 @@ class GetCoinListUseCaseTest {
             val result = getCoinListUseCase(NoParam)
 
             assert(result.first().isRight())
-            assert
+            assert((result.first() as Either.Right).value == expectedResult)
+        }
+
+    @Test
+    fun `when Repository result is failed then
