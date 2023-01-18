@@ -76,3 +76,6 @@ class GetCoinListUseCaseTest {
             coEvery { coinRepository.getCoinList() } returns flowOf(expectedResult.left())
 
             val result = getCoinListUseCase(NoParam)
+
+            assert(result.first().isLeft())
+            assert((result.first() as Either.Left).value =
