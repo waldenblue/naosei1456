@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2022 Ricard Aparicio
 
@@ -21,63 +22,61 @@ import arrow.core.right
 import com.ricardaparicio.cryptodemo.core.NetworkingError
 import com.ricardaparicio.cryptodemo.core.usecase.NoParam
 import com.ricardaparicio.cryptodemo.features.TestCoroutineDispatchers
-import com.ricardaparicio.cryptodemo.features.coinsState
 import com.ricardaparicio.cryptodemo.features.common.data.repository.CoinRepository
-import com.ricardaparicio.cryptodemo.features.common.domain.model.CoinListState
+import com.ricardaparicio.cryptodemo.features.common.domain.model.FiatCurrency
+import com.ricardaparicio.cryptodemo.features.fiatCurrency
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Test
 
 @ExperimentalCoroutinesApi
-class GetCoinListUseCaseTest {
+class GetFiatCurrencyUseCaseTest {
     @MockK
     private lateinit var coinRepository: CoinRepository
-    private lateinit var getCoinListUseCase: GetCoinListUseCase
+    private lateinit var getFiatCurrencyUseCase: GetFiatCurrencyUseCase
 
     @Before
     fun onBefore() {
         MockKAnnotations.init(this)
-        getCoinListUseCase = GetCoinListUseCase(coinRepository, TestCoroutineDispatchers)
+        getFiatCurrencyUseCase = GetFiatCurrencyUseCase(coinRepository, TestCoroutineDispatchers)
     }
 
     @Test
-    fun `when UseCase is executed then request coin list from repository`() =
+    fun `when UseCase is executed then request current fiat currency from repository`() =
         runTest {
-            coEvery { coinRepository.getCoinList() } returns flowOf(coinsState.right())
+            coEvery { coinRepository.getFiatCurrency() } returns fiatCurrency.right()
 
-            getCoinListUseCase(NoParam)
+            getFiatCurrencyUseCase(NoParam)
 
-            coVerify(exactly = 1) { coinRepository.getCoinList() }
+            coVerify(exactly = 1) { coinRepository.getFiatCurrency() }
         }
 
     @Test
     fun `when Repository result is successful then return Either right as UseCase Result`() =
         runTest {
-            val expectedResult = GetCoinListUseCase.Result(coinsState)
-            coEvery { coinRepository.getCoinList() } returns flowOf(coinsState.right())
+            val expectedResult = GetFiatCurrencyUseCase.Result(fiatCurrency)
+            coEvery { coinRepository.getFiatCurrency() } returns fiatCurrency.right()
 
-            val result = getCoinListUseCase(NoParam)
+            val result = getFiatCurrencyUseCase(NoParam)
 
-            assert(result.first().isRight())
-            assert((result.first() as Either.Right).value == expectedResult)
+            assert(result.isRight())
+            assert((result as Either.Right).value == expectedResult)
         }
 
     @Test
     fun `when Repository result is failed then return Either left as Failure`() =
         runTest {
             val expectedResult = NetworkingError
-            coEvery { coinRepository.getCoinList() } returns flowOf(expectedResult.left())
+            coEvery { coinRepository.getFiatCurrency() } returns expectedResult.left()
 
-            val result = getCoinListUseCase(NoParam)
+            val result = getFiatCurrencyUseCase(NoParam)
 
-            assert(result.first().isLeft())
-            assert((result.first() as Either.Left).value == expectedResult)
+            assert(result.isLeft())
+            assert((result as Either.Left).value == expectedResult)
         }
 }
