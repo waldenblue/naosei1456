@@ -18,4 +18,6 @@ package com.ricardaparicio.cryptodemo.features.coinlist.domain
 import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
-import com.ricardapari
+import com.ricardaparicio.cryptodemo.core.NetworkingError
+import com.ricardaparicio.cryptodemo.features.TestCoroutineDispatchers
+import 
