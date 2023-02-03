@@ -28,4 +28,9 @@ import io.mockk.coVerify
 import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
-imp
+import org.junit.Before
+import org.junit.Test
+
+@ExperimentalCoroutinesApi
+class UpdateFiatCurrencyUseCaseTest {
+ 
