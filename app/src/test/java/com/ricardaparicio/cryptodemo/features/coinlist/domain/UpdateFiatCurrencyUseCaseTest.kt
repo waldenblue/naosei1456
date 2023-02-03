@@ -33,4 +33,6 @@ import org.junit.Test
 
 @ExperimentalCoroutinesApi
 class UpdateFiatCurrencyUseCaseTest {
- 
+    @MockK
+    private lateinit var coinRepository: CoinRepository
+    private lateinit var updateFiatCurrencyUseCase: UpdateFiatCurr
