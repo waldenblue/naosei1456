@@ -35,4 +35,9 @@ import org.junit.Test
 class UpdateFiatCurrencyUseCaseTest {
     @MockK
     private lateinit var coinRepository: CoinRepository
-    private lateinit var updateFiatCurrencyUseCase: UpdateFiatCurr
+    private lateinit var updateFiatCurrencyUseCase: UpdateFiatCurrencyUseCase
+
+    @Before
+    fun onBefore() {
+        MockKAnnotations.init(this)
+        updateFiatCurrencyUseC
