@@ -40,4 +40,9 @@ class UpdateFiatCurrencyUseCaseTest {
     @Before
     fun onBefore() {
         MockKAnnotations.init(this)
-        updateFiatCurrencyUseC
+        updateFiatCurrencyUseCase =
+            UpdateFiatCurrencyUseCase(coinRepository, TestCoroutineDispatchers)
+    }
+
+    @Test
+    fun `when UseCase is
