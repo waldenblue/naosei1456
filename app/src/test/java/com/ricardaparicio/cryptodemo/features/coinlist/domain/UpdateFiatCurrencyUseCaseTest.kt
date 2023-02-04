@@ -45,4 +45,6 @@ class UpdateFiatCurrencyUseCaseTest {
     }
 
     @Test
-    fun `when UseCase is
+    fun `when UseCase is executed then request current fiat currency from repository with the same params`() =
+        runTest {
+ 
