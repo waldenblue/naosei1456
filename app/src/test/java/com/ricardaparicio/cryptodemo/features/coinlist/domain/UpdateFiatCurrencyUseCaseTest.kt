@@ -47,4 +47,5 @@ class UpdateFiatCurrencyUseCaseTest {
     @Test
     fun `when UseCase is executed then request current fiat currency from repository with the same params`() =
         runTest {
- 
+            val fiatCurrencyParams = fiatCurrency
+            coEvery { coinRepository.updateFiatCurrency(fiatCurrencyParams) } returns fiatC
