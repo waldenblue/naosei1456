@@ -52,4 +52,8 @@ class UpdateFiatCurrencyUseCaseTest {
 
             updateFiatCurrencyUseCase(UpdateFiatCurrencyUseCase.Params(fiatCurrencyParams))
 
-            coVe
+            coVerify(exactly = 1) { coinRepository.updateFiatCurrency(fiatCurrencyParams) }
+        }
+
+    @Test
+    fun `when Repository result is su
