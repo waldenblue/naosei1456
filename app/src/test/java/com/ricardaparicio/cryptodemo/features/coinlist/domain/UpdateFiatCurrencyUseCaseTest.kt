@@ -56,4 +56,6 @@ class UpdateFiatCurrencyUseCaseTest {
         }
 
     @Test
-    fun `when Repository result is su
+    fun `when Repository result is successful then return Either right as UseCase Result`() =
+        runTest {
+            val expectedResult = UpdateFiatC
