@@ -68,4 +68,6 @@ class UpdateFiatCurrencyUseCaseTest {
         }
 
     @Test
-   
+    fun `when Repository result is failed then return Either left as Failure`() =
+        runTest {
+            val expectedResult = Netw
