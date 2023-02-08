@@ -59,4 +59,8 @@ class UpdateFiatCurrencyUseCaseTest {
     fun `when Repository result is successful then return Either right as UseCase Result`() =
         runTest {
             val expectedResult = UpdateFiatCurrencyUseCase.Result(fiatCurrency)
-            coEvery { coinRepository.updateFiatCurrency(any()) } returns fiatCurrency.ri
+            coEvery { coinRepository.updateFiatCurrency(any()) } returns fiatCurrency.right()
+
+            val result = updateFiatCurrencyUseCase(UpdateFiatCurrencyUseCase.Params(fiatCurrency))
+
+          
