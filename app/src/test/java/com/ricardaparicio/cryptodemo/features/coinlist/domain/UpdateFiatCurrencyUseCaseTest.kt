@@ -73,4 +73,6 @@ class UpdateFiatCurrencyUseCaseTest {
             val expectedResult = NetworkingError
             coEvery { coinRepository.updateFiatCurrency(any()) } returns expectedResult.left()
 
-            val resul
+            val result = updateFiatCurrencyUseCase(UpdateFiatCurrencyUseCase.Params(fiatCurrency))
+
+            assert(result
