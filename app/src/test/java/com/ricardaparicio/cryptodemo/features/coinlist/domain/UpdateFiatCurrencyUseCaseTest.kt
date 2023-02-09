@@ -75,4 +75,7 @@ class UpdateFiatCurrencyUseCaseTest {
 
             val result = updateFiatCurrencyUseCase(UpdateFiatCurrencyUseCase.Params(fiatCurrency))
 
-            assert(result
+            assert(result.isLeft())
+            assert((result as Either.Left).value == expectedResult)
+        }
+}
