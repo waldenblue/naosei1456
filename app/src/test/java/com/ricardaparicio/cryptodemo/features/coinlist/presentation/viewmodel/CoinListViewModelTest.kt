@@ -143,3 +143,48 @@ class CoinListViewModelTest {
                 getCoinListUseCase(any())
             }
             coVerify {
+                reducer.reduce(any(), UpdateContentLoading(ContentLoadingUiAction.Error(NetworkingError)))
+            }
+        }
+
+    @Test
+    fun `when fiat currency is clicked then update fiat currency and notify it the reducer`() =
+        runTest {
+            val updateFiatCurrencyResult = UpdateFiatCurrencyUseCase.Result(fiatCurrency)
+            coEvery { reducer.reduce(any(), any()) } returns CoinListUiState()
+            coEvery { updateFiatCurrencyUseCase(any()) } returns updateFiatCurrencyResult.right()
+
+            viewModel = CoinListViewModel(
+                getCoinListUseCase,
+                getFiatCurrencyUseCase,
+                updateFiatCurrencyUseCase,
+                reducer
+            )
+            viewModel.onFiatCurrencyClicked(fiatCurrency)
+
+            coVerify(exactly = 1) {
+                updateFiatCurrencyUseCase(any())
+                reducer.reduce(any(), UpdateFiatCurrency(updateFiatCurrencyResult.currency))
+            }
+        }
+
+    @Test
+    fun `when fiat currency is clicked then was an error updating fiat currency then render that error`() =
+        runTest {
+            coEvery { reducer.reduce(any(), any()) } returns CoinListUiState()
+            coEvery { updateFiatCurrencyUseCase(any()) } returns LocalError.left()
+
+            viewModel = CoinListViewModel(
+                getCoinListUseCase,
+                getFiatCurrencyUseCase,
+                updateFiatCurrencyUseCase,
+                reducer
+            )
+            viewModel.onFiatCurrencyClicked(fiatCurrency)
+
+            coVerify(exactly = 1) {
+                updateFiatCurrencyUseCase(any())
+                reducer.reduce(any(), UpdateContentLoading(ContentLoadingUiAction.Error(LocalError)))
+            }
+        }
+}
