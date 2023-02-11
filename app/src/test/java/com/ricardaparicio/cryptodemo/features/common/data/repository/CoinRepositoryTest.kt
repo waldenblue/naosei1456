@@ -185,3 +185,49 @@ class CoinRepositoryTest {
             }
             assert(states.size == 2)
             assert(states[0].isRight())
+            assert((states[0] as Either.Right).value is CoinListState.Loading)
+            assert(states[1].isRight())
+            assert((states[1] as Either.Right).value is CoinListState.Coins)
+            assert(((states[1] as Either.Right).value as CoinListState.Coins).coins == coins)
+        }
+
+    @Test
+    fun `when coin list is requested and there was an error retrieving fiat currency then return that error`() =
+        runTest {
+            coEvery { localDataSource.fiatCurrencyFlow() } returns flowOf(LocalError.left())
+
+            val states = mutableListOf<Either<Failure, CoinListState>>()
+            coinRepository.getCoinList().collect { result ->
+                states.add(result)
+            }
+
+            coVerify(exactly = 1) { localDataSource.fiatCurrencyFlow() }
+            assert(states.size == 2)
+            assert(states[0].isRight())
+            assert((states[0] as Either.Right).value is CoinListState.Loading)
+            assert(states[1].isLeft())
+            assert((states[1] as Either.Left).value == LocalError)
+        }
+
+    @Test
+    fun `when coin list is requested and there was an error fetching coin summaries then return that error`() =
+        runTest {
+            coEvery { localDataSource.fiatCurrencyFlow() } returns flowOf(fiatCurrency.right())
+            coEvery { remoteDataSource.getCoinList(fiatCurrency) } returns NetworkingError.left()
+
+            val states = mutableListOf<Either<Failure, CoinListState>>()
+            coinRepository.getCoinList().collect { result ->
+                states.add(result)
+            }
+
+            coVerify(exactly = 1) {
+                localDataSource.fiatCurrencyFlow()
+                remoteDataSource.getCoinList(fiatCurrency)
+            }
+            assert(states.size == 2)
+            assert(states[0].isRight())
+            assert((states[0] as Either.Right).value is CoinListState.Loading)
+            assert(states[1].isLeft())
+            assert((states[1] as Either.Left).value == NetworkingError)
+        }
+}
