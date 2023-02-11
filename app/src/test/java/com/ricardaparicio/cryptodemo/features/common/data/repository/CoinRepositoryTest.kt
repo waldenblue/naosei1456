@@ -66,3 +66,122 @@ class CoinRepositoryTest {
             assert(result.isRight())
             assert((result as Either.Right).value == fiatCurrency)
         }
+
+    @Test
+    fun `when fiat currency is requested and there was an error then return that error`() =
+        runTest {
+            coEvery { localDataSource.fiatCurrencyFlow() } returns flowOf(LocalError.left())
+
+            val result = coinRepository.getFiatCurrency()
+
+            assert(result.isLeft())
+            assert((result as Either.Left).value == LocalError)
+        }
+
+    @Test
+    fun `when fiat currency is requested for update then update it with local DataSource and returns the current one`() =
+        runTest {
+            coEvery { localDataSource.updateFiatCurrency(fiatCurrency) } returns Unit.right()
+            coEvery { localDataSource.fiatCurrencyFlow() } returns flowOf(fiatCurrency.right())
+
+            val result = coinRepository.updateFiatCurrency(fiatCurrency)
+
+            coVerify(exactly = 1) {
+                localDataSource.updateFiatCurrency(fiatCurrency)
+                localDataSource.fiatCurrencyFlow()
+            }
+            assert(result.isRight())
+            assert((result as Either.Right).value == fiatCurrency)
+        }
+
+    @Test
+    fun `when fiat currency is requested for update and there was an error updating then return that error`() =
+        runTest {
+            coEvery { localDataSource.updateFiatCurrency(fiatCurrency) } returns LocalError.left()
+
+            val result = coinRepository.updateFiatCurrency(fiatCurrency)
+
+            coVerify(exactly = 1) { localDataSource.updateFiatCurrency(fiatCurrency) }
+            assert(result.isLeft())
+            assert((result as Either.Left).value == LocalError)
+        }
+
+    @Test
+    fun `when fiat currency is requested for update and there was an error returning the current fiat currency then return that error`() =
+        runTest {
+            coEvery { localDataSource.updateFiatCurrency(fiatCurrency) } returns Unit.right()
+            coEvery { localDataSource.fiatCurrencyFlow() } returns flowOf(LocalError.left())
+
+            val result = coinRepository.updateFiatCurrency(fiatCurrency)
+
+            coVerify(exactly = 1) {
+                localDataSource.updateFiatCurrency(fiatCurrency)
+                localDataSource.fiatCurrencyFlow()
+            }
+            assert(result.isLeft())
+            assert((result as Either.Left).value == LocalError)
+        }
+
+    @Test
+    fun `when coin is requested then return it from remote Datasource with the current fiat currency`() =
+        runTest {
+            coEvery { remoteDataSource.getCoin(COIN_ID, fiatCurrency) } returns coin.right()
+            coEvery { localDataSource.fiatCurrencyFlow() } returns flowOf(fiatCurrency.right())
+
+            val result = coinRepository.getCoin(COIN_ID)
+
+            coVerify(exactly = 1) {
+                localDataSource.fiatCurrencyFlow()
+                remoteDataSource.getCoin(COIN_ID, fiatCurrency)
+            }
+            assert(result.isRight())
+            assert((result as Either.Right).value == coin)
+        }
+
+    @Test
+    fun `when coin is requested and there was an error retrieving fiat currency from local then return that error`() =
+        runTest {
+            coEvery { remoteDataSource.getCoin(COIN_ID, fiatCurrency) } returns coin.right()
+            coEvery { localDataSource.fiatCurrencyFlow() } returns flowOf(LocalError.left())
+
+            val result = coinRepository.getCoin(COIN_ID)
+
+            coVerify(exactly = 1) { localDataSource.fiatCurrencyFlow() }
+            assert(result.isLeft())
+            assert((result as Either.Left).value == LocalError)
+        }
+
+    @Test
+    fun `when coin is requested and there was an error fetching it from remote then return that error`() =
+        runTest {
+            coEvery { remoteDataSource.getCoin(COIN_ID, fiatCurrency) } returns NetworkingError.left()
+            coEvery { localDataSource.fiatCurrencyFlow() } returns flowOf(fiatCurrency.right())
+
+            val result = coinRepository.getCoin(COIN_ID)
+
+            coVerify(exactly = 1) {
+                localDataSource.fiatCurrencyFlow()
+                remoteDataSource.getCoin(COIN_ID, fiatCurrency)
+            }
+            assert(result.isLeft())
+            assert((result as Either.Left).value == NetworkingError)
+        }
+
+    @Test
+    fun `when coin list is requested then collect current fiat currency and get coin list from remote`() =
+        runTest {
+            val coins = listOf(coinSummary)
+            coEvery { localDataSource.fiatCurrencyFlow() } returns flowOf(fiatCurrency.right())
+            coEvery { remoteDataSource.getCoinList(fiatCurrency) } returns coins.right()
+
+            val states = mutableListOf<Either<Failure, CoinListState>>()
+            coinRepository.getCoinList().collect { result ->
+                states.add(result)
+            }
+
+            coVerify(exactly = 1) {
+                localDataSource.fiatCurrencyFlow()
+                remoteDataSource.getCoinList(fiatCurrency)
+            }
+            assert(states.size == 2)
+            assert(states[0].isRight())
