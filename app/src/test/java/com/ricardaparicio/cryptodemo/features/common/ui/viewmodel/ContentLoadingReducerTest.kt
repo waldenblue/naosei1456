@@ -15,4 +15,6 @@
  */
 package com.ricardaparicio.cryptodemo.features.common.ui.viewmodel
 
-import com.ricardaparic
+import com.ricardaparicio.cryptodemo.core.NetworkingError
+import com.ricardaparicio.cryptodemo.features.common.ui.ContentLoadingUiState
+import com.
