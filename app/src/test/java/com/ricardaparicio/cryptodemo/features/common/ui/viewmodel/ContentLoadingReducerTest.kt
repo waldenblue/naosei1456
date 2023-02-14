@@ -17,4 +17,8 @@ package com.ricardaparicio.cryptodemo.features.common.ui.viewmodel
 
 import com.ricardaparicio.cryptodemo.core.NetworkingError
 import com.ricardaparicio.cryptodemo.features.common.ui.ContentLoadingUiState
-import com.
+import com.ricardaparicio.cryptodemo.features.common.ui.model.AlertErrorUiModel
+import org.junit.Before
+import org.junit.Test
+
+class ContentLoading
