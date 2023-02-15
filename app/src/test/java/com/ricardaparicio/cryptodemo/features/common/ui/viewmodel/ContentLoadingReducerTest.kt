@@ -27,4 +27,8 @@ class ContentLoadingReducerTest {
 
     @Before
     fun onBefore() {
-        reducer = 
+        reducer = ContentLoadingReducer()
+    }
+
+    @Test
+    fun `when Loading action is requested then update the state properly
