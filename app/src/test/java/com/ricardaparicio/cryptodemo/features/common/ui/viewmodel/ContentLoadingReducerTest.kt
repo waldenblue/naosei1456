@@ -21,4 +21,10 @@ import com.ricardaparicio.cryptodemo.features.common.ui.model.AlertErrorUiModel
 import org.junit.Before
 import org.junit.Test
 
-class ContentLoading
+class ContentLoadingReducerTest {
+
+    private lateinit var reducer : ContentLoadingReducer
+
+    @Before
+    fun onBefore() {
+        reducer = 
