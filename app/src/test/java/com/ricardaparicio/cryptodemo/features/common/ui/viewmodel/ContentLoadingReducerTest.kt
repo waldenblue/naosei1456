@@ -31,4 +31,7 @@ class ContentLoadingReducerTest {
     }
 
     @Test
-    fun `when Loading action is requested then update the state properly
+    fun `when Loading action is requested then update the state properly`() {
+        val updatedState = reducer.reduce(ContentLoadingUiState(), ContentLoadingUiAction.Loading)
+
+     
