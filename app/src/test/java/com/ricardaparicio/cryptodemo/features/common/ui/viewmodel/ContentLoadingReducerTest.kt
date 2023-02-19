@@ -38,4 +38,7 @@ class ContentLoadingReducerTest {
     }
 
     @Test
-    fun `when Success action is requested then update t
+    fun `when Success action is requested then update the state properly`() {
+        val updatedState = reducer.reduce(ContentLoadingUiState(), ContentLoadingUiAction.Success)
+
+        
