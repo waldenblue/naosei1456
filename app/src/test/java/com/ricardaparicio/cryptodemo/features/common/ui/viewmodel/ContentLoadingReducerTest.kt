@@ -47,4 +47,10 @@ class ContentLoadingReducerTest {
 
     @Test
     fun `when CloseError action is requested then update the state properly`() {
-        val updatedState = reducer.reduce(ContentLoadingUiState(), Co
+        val updatedState = reducer.reduce(ContentLoadingUiState(), ContentLoadingUiAction.CloseError)
+
+        assert(updatedState.error == null)
+    }
+
+    @Test
+    fun `when Error action is 
