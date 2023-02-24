@@ -53,4 +53,5 @@ class ContentLoadingReducerTest {
     }
 
     @Test
-    fun `when Error action is 
+    fun `when Error action is requested then update the state properly`() {
+        val updatedState = reducer.reduce(ContentLoadingUiState(), ContentLoadi
